@@ -41,7 +41,7 @@ combos {
   };
   layer2 {
     key-positions = <38 39>;
-    bindings = <&kp 2>;
+    bindings = <&mo 2>;
   };
 };
 
@@ -60,7 +60,7 @@ keymap {
       &kp LSHFT &kp Z       &kp X     &kp C       &kp V     &kp B
       &kp N     &kp M       &kp COMMA &kp DOT     &kp FSLH  &kp RALT
       // THUMBS
-      &kp LCTRL &kp LGUI    &kp 1
+      &kp LCTRL &kp LGUI    &mt 1 RET
       &kp SPC   &kp RCTRL   &kp RSHFT
     >;
   };
