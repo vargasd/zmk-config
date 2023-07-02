@@ -60,22 +60,22 @@ keymap {
       &kp LSHFT &kp Z       &kp X     &kp C       &kp V     &kp B
       &kp N     &kp M       &kp COMMA &kp DOT     &kp FSLH  &kp RALT
       // THUMBS
-      &kp LCTRL &kp LGUI    &mt 1 RET
-      &kp SPC   &kp RCTRL   &kp RSHFT
+      &kp LGUI  &lt 1 RET   &kp LCTRL
+      &kp RCTRL &lt 2 SPC   &kp RSHFT
     >;
   };
 
   lower_layer {
     bindings = <
       // ROW 1
-      &trans    &trans      &trans    &trans      &trans    &trans
+      &trans    &kp GRAVE   &kp TILDE &kp DLLR    &kp BSLH  &kp PIPE
       &kp PLUS  &kp N7      &kp N8    &kp N9      &kp MINUS &kp DEL
       // ROW 2
-      &trans    &trans      &trans    &trans      &trans    &trans
-      &kp EQUAL &kp N4      &kp N5    &kp N6      &kp UNDER &kp GRAVE
+      &trans    &kp CARET   &kp EXCL  &kp HASH    &kp STAR  &kp AMPS
+      &kp EQUAL &kp N4      &kp N5    &kp N6      &kp COLON &kp GRAVE
       // ROW 3
-      &trans    &trans      &trans    &trans      &trans    &trans
-      &kp N0    &kp N1      &kp N2    &kp N3      &kp BSLH  &kp PIPE
+      &trans    &kp AT      &kp HASH  &kp STAR    &trans    &trans
+      &kp N0    &kp N1      &kp N2    &kp N3      &kp UNDER &trans
       // THUMBS
       &trans    &trans      &trans
       &trans    &trans      &trans
