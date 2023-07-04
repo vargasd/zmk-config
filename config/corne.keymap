@@ -100,13 +100,13 @@ behaviors {
       36 37 38 39 40 41
     >;
   };
+  */
   td_cap_word: tap_dance_mod_tap {
     compatible = "zmk,behavior-tap-dance";
     label = "td_cap_word";
     #binding-cells = <0>;
     bindings = <&kp LSHFT>, <&caps_word>;
   };
-  */
 };
 
 keymap {
@@ -121,7 +121,7 @@ keymap {
       &kp ESC       &kp A            &kp S            &kp D            &kp F             &kp G
       &kp H         &kp J            &kp K            &kp L            &kp SEMI          &kp SQT
       // ROW 3
-      &caps_word    &kp Z            &kp X            &kp C            &kp V             &kp B
+      &td_cap_word  &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &kp BSLH
       // THUMBS
       &mt LCTRL ESC &lt 1 RET        &mt LSHFT RET
@@ -136,7 +136,7 @@ keymap {
       &trans        &kp LBKT         &kp RBKT         &kp MINUS        &kp EQUAL         &trans
       // ROW 2
       &trans        &kp N1           &kp N2           &kp N3           &kp N4            &kp N5
-      &kp N6        &kp N7           &kp N8           &kp N9           &kp N0            &kp SQT
+      &kp N6        &kp N7           &kp N8           &kp N9           &kp N0            &kp GRAVE
       // ROW 3
       &trans        &trans           &trans           &trans           &trans            &trans
       &trans        &trans           &trans           &trans           &trans            &trans
