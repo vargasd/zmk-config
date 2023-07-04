@@ -39,20 +39,28 @@ combos {
     key-positions = <21 22>;
     bindings = <&kp RET>;
   };
-  lgui {
+  lctrl {
     key-positions = <4 16>;
+    bindings = <&kp LCTRL>;
+  };
+  lgui {
+    key-positions = <3 15>;
     bindings = <&kp LGUI>;
   };
   lalt {
-    key-positions = <3 15>;
+    key-positions = <2 14>;
     bindings = <&kp LALT>;
   };
-  rgui {
+  rctrl {
     key-positions = <7 19>;
+    bindings = <&kp RCTRL>;
+  };
+  rgui {
+    key-positions = <8 20>;
     bindings = <&kp RGUI>;
   };
   ralt {
-    key-positions = <8 20>;
+    key-positions = <9 21>;
     bindings = <&kp RALT>;
   };
 };
@@ -113,7 +121,7 @@ keymap {
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &kp BSLH
       // THUMBS
       &mt LCTRL ESC &lt 1 RET        &mt LSHFT RET
-                                                      &mt RCTRL SPC    &mt RSHFT SPC     &lt 2 DEL
+                                                      &mt RSHFT SPC    &lt 1 SPC         &lt 2 DEL
     >;
   };
 
@@ -129,8 +137,8 @@ keymap {
       &trans        &trans           &trans           &trans           &trans            &trans
       &trans        &trans           &trans           &trans           &trans            &trans
       // THUMBS
-      &trans        &trans           &trans
-                                                      &trans           &trans            &trans
+      &trans        &mt LSHFT SPC    &trans
+                                                      &trans           &mt RSHFT SPC     &trans
     >;
   };
 
