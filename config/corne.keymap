@@ -20,20 +20,45 @@ combos {
     bindings = <&kp RBKT>;
   };
   lparen {
-    key-positions = <31 32>;
+    key-positions = <19 20>;
     bindings = <&kp LPAR>;
   };
   rparen {
-    key-positions = <32 33>;
+    key-positions = <20 21>;
     bindings = <&kp RPAR>;
+  };
+  lbrace {
+    key-positions = <31 32>;
+    bindings = <&kp LBRC>;
+  };
+  rbrace {
+    key-positions = <32 33>;
+    bindings = <&kp RBRC>;
   };
   ret {
     key-positions = <21 22>;
     bindings = <&kp RET>;
   };
+  lgui {
+    key-positions = <4 16>;
+    bindings = <&kp LGUI>;
+  };
+  lalt {
+    key-positions = <3 15>;
+    bindings = <&kp LALT>;
+  };
+  rgui {
+    key-positions = <7 19>;
+    bindings = <&kp RGUI>;
+  };
+  ralt {
+    key-positions = <8 20>;
+    bindings = <&kp RALT>;
+  };
 };
 
 behaviors {
+  /*
   lh_pht: left_hand_positional_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "LEFT_POSITIONAL_HOLD_TAP";
@@ -49,12 +74,10 @@ behaviors {
       36 37 38 39 40 41
     >;
   };
-
   rh_pht: right_hand_positional_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "RIGHT_POSITIONAL_HOLD_TAP";
     #binding-cells = <2>;
-    flavor = "tap-unless-interrupted";
     tapping-term-ms = <200>;                       // <---[[produces tap if held longer than tapping-term-ms]]
     quick-tap-ms = <250>;
     bindings = <&kp>, <&kp>;
@@ -65,13 +88,13 @@ behaviors {
       36 37 38 39 40 41
     >;
   };
-
   td_cap_word: tap_dance_mod_tap {
     compatible = "zmk,behavior-tap-dance";
     label = "td_cap_word";
     #binding-cells = <0>;
     bindings = <&kp LSHFT>, <&caps_word>;
   };
+  */
 };
 
 keymap {
@@ -83,14 +106,14 @@ keymap {
       &kp TAB       &kp Q            &kp W            &kp E            &kp R             &kp T
       &kp Y         &kp U            &kp I            &kp O            &kp P             &kp BSPC
       // ROW 2
-      &lt 2 ESC     &lh_pht LALT A   &lh_pht LGUI S   &lh_pht LCTRL D  &lh_pht LSHFT F   &kp G
-      &kp H         &rh_pht RSHFT J  &rh_pht RCTRL K  &rh_pht RGUI L   &rh_pht RALT SEMI &kp SQT
+      &kp ESC       &kp A            &kp S            &kp D            &kp F             &kp G
+      &kp H         &kp J            &kp K            &kp L            &kp SEMI          &kp SQT
       // ROW 3
-      &td_cap_word  &kp Z            &kp X            &kp C            &kp V             &kp B
+      &caps_word    &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &kp BSLH
       // THUMBS
-      &kp ESC       &lt 1 RET        &kp SPC
-      &kp SPC       &lt 1 SPC        &lt 2 RET
+      &mt LCTRL ESC &lt 1 RET        &mt LSHFT RET
+                                                      &mt RCTRL SPC    &mt RSHFT SPC     &lt 2 DEL
     >;
   };
 
@@ -98,16 +121,16 @@ keymap {
     bindings = <
       // ROW 1
       &trans        &kp GRAVE        &trans           &trans           &trans            &trans
-      &trans        &trans           &trans           &kp MINUS        &kp EQUAL         &kp DEL
+      &trans        &kp LBKT         &kp RBKT         &kp MINUS        &kp EQUAL         &trans
       // ROW 2
-      &trans        &lh_pht LALT N1  &lh_pht LGUI N2  &lh_pht LCTRL N3 &lh_pht LSHFT N4  &kp N5
-      &kp N6        &rh_pht RSHFT N7 &rh_pht RCTRL N8 &rh_pht RGUI N9  &rh_pht RALT N0   &kp SQT
+      &trans        &kp N1           &kp N2           &kp N3           &kp N4            &kp N5
+      &kp N6        &kp N7           &kp N8           &kp N9           &kp N0            &kp SQT
       // ROW 3
       &trans        &trans           &trans           &trans           &trans            &trans
       &trans        &trans           &trans           &trans           &trans            &trans
       // THUMBS
-      &trans        &mt LSHFT RET    &trans
-      &trans        &mt RSHFT SPC    &trans
+      &trans        &trans           &trans
+                                                      &trans           &trans            &trans
     >;
   };
 
@@ -115,16 +138,16 @@ keymap {
     bindings = <
       // ROW 1
       &trans        &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &trans
+      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &bt BT_SEL 0
       // ROW 2
-      &trans        &kp F6           &kp F7           &kp F8           &kp F9            &kp F10
-      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &trans
+      &bt BT_CLR    &kp F6           &kp F7           &kp F8           &kp F9            &kp F10
+      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &bt BT_SEL 1
       // ROW 3
       &trans        &kp F11          &kp F12          &kp K_MUTE       &kp K_VOL_DN      &kp K_VOL_DN
-      &trans        &kp C_PREV       &kp C_PP         &kp C_PP         &kp C_NEXT        &trans
+      &trans        &kp C_PREV       &kp C_PP         &kp C_PP         &kp C_NEXT        &bt BT_SEL 2
       // THUMBS
       &trans        &trans           &trans
-      &trans        &trans           &trans
+                                                      &trans           &trans            &trans
     >;
   };
 };
