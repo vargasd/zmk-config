@@ -39,7 +39,11 @@ combos {
     key-positions = <21 22>;
     bindings = <&kp RET>;
   };
-  lctrl {
+  lctrl_hor {
+    key-positions = <15 16>;
+    bindings = <&kp LCTRL>;
+  };
+  lctrl_vert {
     key-positions = <4 16>;
     bindings = <&kp LCTRL>;
   };
