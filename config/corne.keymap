@@ -29,7 +29,7 @@ combos {
   };
   jkl {
     key-positions = <19 20 21>;
-    bindings = <&kp RS(RALT)>;
+    bindings = <&kp RG(RALT)>;
   };
   lbrace {
     key-positions = <31 32>;
@@ -53,7 +53,7 @@ combos {
   };
   sdf {
     key-positions = <14 15 16>;
-    bindings = <&kp RS(RALT)>;
+    bindings = <&kp RG(RALT)>;
   };
 };
 
