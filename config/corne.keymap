@@ -55,6 +55,10 @@ combos {
     key-positions = <14 15 16>;
     bindings = <&kp RG(RALT)>;
   };
+  ctrl_spc {
+    key-positions = <39 40>;
+    bindings = <&kp RC(SPC)>;
+  };
 };
 
 behaviors {
