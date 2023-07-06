@@ -76,17 +76,17 @@ keymap {
   default_layer {
     bindings = <
       // ROW 1
-      &kp TAB       &kp Q            &kp W            &kp E            &kp R             &kp T
-      &kp Y         &kp U            &kp I            &kp O            &kp P             &kp BSPC
+      &kp GRAVE     &kp Q            &kp W            &kp E            &kp R             &kp T
+      &kp Y         &kp U            &kp I            &kp O            &kp P             &kp MINUS
       // ROW 2
-      &kp ESC       &kp A            &kp S            &kp D            &kp F             &kp G
+      &kp COLON     &kp A            &kp S            &kp D            &kp F             &kp G
       &kp H         &kp J            &kp K            &kp L            &kp SEMI          &kp SQT
       // ROW 3
       &td_cap_word  &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &kp BSLH
       // THUMBS
       &mt LCTRL DEL &lt 1 ESC        &mt LSHFT TAB
-                                                      &mt RCTRL RET    &lt 1 SPC         &lt 2 BSPC
+                                                      &mt RCTRL RET    &lt 2 SPC         &mt RSHFT BSPC
     >;
   };
 
@@ -102,7 +102,7 @@ keymap {
       &trans        &trans           &trans           &trans           &trans            &trans
       &trans        &trans           &trans           &trans           &trans            &trans
       // THUMBS
-      &trans        &mt LSHFT ESC    &trans
+      &trans        &trans           &trans
                                                       &trans           &mt RSHFT SPC     &trans
     >;
   };
@@ -111,13 +111,13 @@ keymap {
     bindings = <
       // ROW 1
       &kp C_BRI_UP  &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &bt BT_SEL 0
+      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &kp C_PREV
       // ROW 2
       &bt BT_CLR    &kp F6           &kp F7           &kp F8           &kp F9            &kp F10
-      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &bt BT_SEL 1
+      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &kp C_PP
       // ROW 3
       &kp C_BRI_DN  &kp F11          &kp F12          &kp K_MUTE       &kp K_VOL_DN      &kp K_VOL_UP
-      &trans        &kp C_PREV       &kp C_PP         &kp C_PP         &kp C_NEXT        &bt BT_SEL 2
+      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_PREV
       // THUMBS
       &trans        &mt LCTRL ESC    &trans
                                                       &trans           &trans            &trans
