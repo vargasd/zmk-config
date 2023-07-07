@@ -59,6 +59,46 @@ combos {
     key-positions = <32 33>;
     bindings = <&kp RBRC>;
   };
+  left_index_stretch_up {
+    key-positions = <5 17>;
+    bindings = <&kp N0>;
+  };
+  left_index_up {
+    key-positions = <4 16>;
+    bindings = <&kp N1>;
+  };
+  left_middle_up {
+    key-positions = <3 15>;
+    bindings = <&kp N2>;
+  };
+  left_ring_up {
+    key-positions = <2 14>;
+    bindings = <&kp N3>;
+  };
+  left_pinky_up {
+    key-positions = <1 13>;
+    bindings = <&kp N4>;
+  };
+  left_index_stretch_down {
+    key-positions = <17 29>;
+    bindings = <&kp N9>;
+  };
+  left_index_down {
+    key-positions = <16 28>;
+    bindings = <&kp N8>;
+  };
+  left_middle_down {
+    key-positions = <15 27>;
+    bindings = <&kp N7>;
+  };
+  left_ring_down {
+    key-positions = <14 26>;
+    bindings = <&kp N6>;
+  };
+  left_pinky_down {
+    key-positions = <13 25>;
+    bindings = <&kp N5>;
+  };
   left_index_middle {
     key-positions = <15 16>;
     bindings = <&kp LGUI>;
