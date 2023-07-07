@@ -11,47 +11,63 @@
 / {
 combos {
   compatible = "zmk,combos";
-  lbrack {
+  right_index_middle_top {
     key-positions = <7 8>;
     bindings = <&kp LBKT>;
   };
-  rbrack {
+  right_middle_ring_top {
     key-positions = <8 9>;
     bindings = <&kp RBKT>;
   };
-  jk {
+  right_index_middle {
     key-positions = <19 20>;
     bindings = <&mt RGUI LPAR>;
   };
-  kl {
+  right_middle_ring {
     key-positions = <20 21>;
     bindings = <&mt RALT RPAR>;
   };
-  jkl {
+  right_index_middle_ring {
     key-positions = <19 20 21>;
     bindings = <&kp RG(RALT)>;
   };
-  lbrace {
+  right_index_stretch_up {
+    key-positions = <6 18>;
+    bindings = <&kp GRAVE>;
+  };
+  right_index_up {
+    key-positions = <7 19>;
+    bindings = <&kp SQT>;
+  };
+  right_middle_up {
+    key-positions = <8 20>;
+    bindings = <&kp MINUS>;
+  };
+  right_ring_up {
+    key-positions = <9 21>;
+    bindings = <&kp EQUAL>;
+  };
+  right_pinky_up {
+    key-positions = <10 22>;
+    bindings = <&kp BSLH>;
+  };
+  right_index_middle_bottom {
     key-positions = <31 32>;
     bindings = <&kp LBRC>;
   };
-  rbrace {
+  right_middle_ring_bottom {
     key-positions = <32 33>;
     bindings = <&kp RBRC>;
   };
-  ret {
-    key-positions = <21 22>;
-    bindings = <&kp RET>;
-  };
-  df {
+  left_index_middle {
     key-positions = <15 16>;
     bindings = <&kp LGUI>;
   };
-  sd {
+  left_middle_ring {
     key-positions = <14 15>;
     bindings = <&kp LALT>;
   };
-  sdf {
+  left_index_middle_ring {
     key-positions = <14 15 16>;
     bindings = <&kp RG(RALT)>;
   };
@@ -76,7 +92,7 @@ keymap {
   default_layer {
     bindings = <
       // ROW 1
-      &kp GRAVE     &kp Q            &kp W            &kp E            &kp R             &kp T
+      &trans        &kp Q            &kp W            &kp E            &kp R             &kp T
       &kp Y         &kp U            &kp I            &kp O            &kp P             &kp MINUS
       // ROW 2
       &kp ESC       &kp A            &kp S            &kp D            &kp F             &kp G
@@ -117,9 +133,9 @@ keymap {
       &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &kp C_PP
       // ROW 3
       &kp C_BRI_DN  &kp F11          &kp F12          &kp K_MUTE       &kp K_VOL_DN      &kp K_VOL_UP
-      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_PREV
+      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_NEXT
       // THUMBS
-      &trans        &mt LCTRL ESC    &trans
+      &trans        &trans           &trans
                                                       &trans           &trans            &trans
     >;
   };
