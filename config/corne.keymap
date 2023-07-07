@@ -16,6 +16,8 @@ combos {
     bindings = <&kp LBKT>;
   };
   right_middle_ring_top {
+    // io is too common
+    timeout-ms = <25>;
     key-positions = <8 9>;
     bindings = <&kp RBKT>;
   };
@@ -71,6 +73,56 @@ combos {
     key-positions = <14 15 16>;
     bindings = <&kp RG(RALT)>;
   };
+  left_index_stretch_up {
+    timeout-ms = <100>;
+    key-positions = <5 17>;
+    bindings = <&kp N0>;
+  };
+  left_index_up {
+    timeout-ms = <100>;
+    key-positions = <4 16>;
+    bindings = <&kp N1>;
+  };
+  left_middle_up {
+    timeout-ms = <100>;
+    key-positions = <3 15>;
+    bindings = <&kp N2>;
+  };
+  left_ring_up {
+    timeout-ms = <100>;
+    key-positions = <2 14>;
+    bindings = <&kp N3>;
+  };
+  left_pinky_up {
+    timeout-ms = <100>;
+    key-positions = <1 13>;
+    bindings = <&kp N4>;
+  };
+  left_index_stretch_down {
+    timeout-ms = <100>;
+    key-positions = <17 29>;
+    bindings = <&kp N9>;
+  };
+  left_index_down {
+    timeout-ms = <100>;
+    key-positions = <16 28>;
+    bindings = <&kp N8>;
+  };
+  left_middle_down {
+    timeout-ms = <100>;
+    key-positions = <15 27>;
+    bindings = <&kp N7>;
+  };
+  left_ring_down {
+    timeout-ms = <100>;
+    key-positions = <14 26>;
+    bindings = <&kp N6>;
+  };
+  left_pinky_down {
+    timeout-ms = <100>;
+    key-positions = <13 25>;
+    bindings = <&kp N5>;
+  }
   inner_right_thumb {
     key-positions = <39 40>;
     bindings = <&mt RC(RSHFT) RC(SPC)>;
