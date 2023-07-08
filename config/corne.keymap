@@ -86,6 +86,7 @@ combos {
     bindings = <&kp HASH>;
   };
   right_home_up_home {
+    timeout-ms = <100>;
     key-positions = <8 19 21>;
     bindings = <&kp CARET>;
   };
