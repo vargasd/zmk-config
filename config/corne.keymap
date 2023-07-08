@@ -61,6 +61,38 @@ combos {
     key-positions = <32 33>;
     bindings = <&kp RBRC>;
   };
+  right_index_horizontal {
+    key-positions = <18 19>;
+    bindings = <&kp AMPS>;
+  };
+  right_index_top_horiztontal {
+    key-positions = <6 7>;
+    bindings = <&kp STAR>;
+  };
+  right_index_bottom_horizontal {
+    key-positions = <30 31>;
+    bindings = <&kp DOLLAR>;
+  };
+  right_index_down {
+    key-positions = <19 31>;
+    bindings = <&kp EXCL>;
+  };
+  right_middle_down {
+    key-positions = <20 32>;
+    bindings = <&kp AT>;
+  };
+  right_ring_down {
+    key-positions = <21 33>;
+    bindings = <&kp HASH>;
+  };
+  right_home_up_home {
+    key-positions = <8 19 21>;
+    bindings = <&kp CARET>;
+  };
+  right_up_home {
+    key-positions = <7 20>;
+    bindings = <&kp PERCENT>;
+  };
   left_index_middle {
     key-positions = <15 16>;
     bindings = <&kp LGUI>;
@@ -161,11 +193,11 @@ keymap {
   lower_layer {
     bindings = <
       // ROW 1
-      &kp C_BRI_UP  &trans           &trans           &trans           &trans            &trans
+      &kp C_BRI_UP  &kp CARET        &kp AMPS         &kp PERCENT      &kp STAR          &kp DOLLAR
       &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &kp C_PREV
       // ROW 2
       &bt BT_CLR    &kp N4           &kp N3           &kp N2           &kp N1            &kp N0
-      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &kp C_PP
+      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &bt BT_CLR        &kp C_PP
       // ROW 3
       &kp C_BRI_DN  &kp N5           &kp N6           &kp N7           &kp N8            &kp N9
       &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_NEXT
