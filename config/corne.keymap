@@ -53,6 +53,10 @@ combos {
     key-positions = <10 22>;
     bindings = <&kp BSLH>;
   };
+  right_pinky_down {
+    key-positions = <22 34>;
+    bindings = <&kp BSLH>;
+  };
   right_index_middle_bottom {
     key-positions = <31 32>;
     bindings = <&kp LBRC>;
