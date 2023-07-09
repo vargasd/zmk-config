@@ -37,6 +37,10 @@ combos {
     key-positions = <6 18>;
     bindings = <&kp GRAVE>;
   };
+  right_index_stretch_down {
+    key-positions = <18 30>;
+    bindings = <&kp PIPE>;
+  };
   right_index_up {
     key-positions = <7 19>;
     bindings = <&kp SQT>;
