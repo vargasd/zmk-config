@@ -198,8 +198,8 @@ keymap {
       &trans        &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &trans
       // THUMBS
-      &mt LCTRL DEL &lt 1 ESC        &mt LSHFT TAB
-                                                      &mt RCTRL RET    &lt 1 SPC         &mt RSHFT BSPC
+      &kp BSPC      &mt LCTRL ESC    &mt LSHFT TAB
+                                                      &mt RCTRL RET    &lt 1 SPC         &mt RSHFT DEL
     >;
   };
 
@@ -216,7 +216,7 @@ keymap {
       &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_NEXT
       // THUMBS
       &trans        &mt LSHFT ESC    &trans
-                                                      &trans           &mt RSHFT SPC     &trans
+                                                      &trans           &trans            &trans
     >;
   };
 
