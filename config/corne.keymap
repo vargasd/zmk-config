@@ -180,7 +180,7 @@ keymap {
       &trans        &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &trans
       // THUMBS
-      &mt LCTRL DEL &mt LCTRL ESC    &mt LSHFT TAB
+      &mt LGUI DEL  &mt LCTRL ESC    &mt LSHFT TAB
                                                       &mt RCTRL RET    &lt 1 SPC         &mt RSHFT BSPC
     >;
   };
