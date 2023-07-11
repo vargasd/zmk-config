@@ -95,17 +95,14 @@ combos {
     bindings = <&kp HASH>;
   };
   right_home_up {
-    timeout-ms = <100>;
     key-positions = <8 19>;
     bindings = <&kp CARET>;
   };
   right_up_home {
-    timeout-ms = <100>;
     key-positions = <7 20>;
     bindings = <&kp PERCENT>;
   };
   right_middle_up_home {
-    timeout-ms = <100>;
     key-positions = <8 21>;
     bindings = <&kp PERCENT>;
   };
