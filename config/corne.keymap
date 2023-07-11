@@ -12,6 +12,7 @@
 combos {
   compatible = "zmk,combos";
   right_index_middle_top {
+    timeout-ms = <25>;
     key-positions = <7 8>;
     bindings = <&kp LBKT>;
   };
@@ -99,74 +100,58 @@ combos {
     bindings = <&kp CARET>;
   };
   right_up_home {
+    timeout-ms = <100>;
     key-positions = <7 20>;
     bindings = <&kp PERCENT>;
   };
   right_middle_up_home {
+    timeout-ms = <100>;
     key-positions = <8 21>;
     bindings = <&kp PERCENT>;
   };
   left_index_middle {
     key-positions = <15 16>;
-    bindings = <&kp LGUI>;
+    bindings = <&mt LGUI N0>;
   };
   left_middle_ring {
     key-positions = <14 15>;
-    bindings = <&kp LALT>;
+    bindings = <&mt LALT N1>;
   };
   left_index_middle_ring {
     key-positions = <14 15 16>;
     bindings = <&kp RG(RALT)>;
   };
-  left_index_stretch_up {
-    timeout-ms = <100>;
-    key-positions = <5 17>;
-    bindings = <&kp N0>;
-  };
   left_index_up {
-    timeout-ms = <100>;
     key-positions = <4 16>;
-    bindings = <&kp N1>;
-  };
-  left_middle_up {
-    timeout-ms = <100>;
-    key-positions = <3 15>;
     bindings = <&kp N2>;
   };
-  left_ring_up {
-    timeout-ms = <100>;
-    key-positions = <2 14>;
+  left_middle_up {
+    key-positions = <3 15>;
     bindings = <&kp N3>;
   };
-  left_pinky_up {
-    timeout-ms = <100>;
-    key-positions = <1 13>;
+  left_ring_up {
+    key-positions = <2 14>;
     bindings = <&kp N4>;
   };
-  left_index_stretch_down {
-    timeout-ms = <100>;
-    key-positions = <17 29>;
-    bindings = <&kp N9>;
-  };
   left_index_down {
-    timeout-ms = <100>;
     key-positions = <16 28>;
-    bindings = <&kp N8>;
+    bindings = <&kp N5>;
   };
   left_middle_down {
-    timeout-ms = <100>;
     key-positions = <15 27>;
-    bindings = <&kp N7>;
-  };
-  left_ring_down {
-    timeout-ms = <100>;
-    key-positions = <14 26>;
     bindings = <&kp N6>;
   };
-  left_pinky_down {
-    timeout-ms = <100>;
-    key-positions = <13 25>;
-    bindings = <&kp N5>;
+  left_ring_down {
+    key-positions = <14 26>;
+    bindings = <&kp N7>;
+  };
+  left_index_middle_down {
+    key-positions = <27 28>;
+    bindings = <&kp N8>;
+  };
+  left_index_middle_ring_down {
+    key-positions = <26 27>;
+    bindings = <&kp N9>;
   };
   inner_right_thumb {
     key-positions = <39 40>;
@@ -212,7 +197,7 @@ keymap {
       &bt BT_CLR    &kp N4           &kp N3           &kp N2           &kp N1            &kp N0
       &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &bt BT_CLR        &kp C_PP
       // ROW 3
-      &kp C_BRI_DN  &kp N5           &kp N6           &kp N7           &kp N8            &kp N9
+      &kp C_BRI_DN  &kp N9           &kp N8           &kp N7           &kp N6            &kp N5
       &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_NEXT
       // THUMBS
       &trans        &mt LSHFT ESC    &trans
