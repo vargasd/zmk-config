@@ -34,6 +34,10 @@ combos {
     key-positions = <19 20 21>;
     bindings = <&kp RG(RALT)>;
   };
+  right_ring_pinky {
+    key-positions = <21 22>;
+    bindings = <&kp TAB>;
+  };
   right_index_stretch_up {
     key-positions = <6 18>;
     bindings = <&kp GRAVE>;
