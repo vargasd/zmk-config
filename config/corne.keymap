@@ -184,8 +184,8 @@ keymap {
       &trans        &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &trans
       // THUMBS
-      &mt LGUI DEL  &mt LCTRL ESC    &mt LSHFT TAB
-                                                      &mt RCTRL RET    &lt 1 SPC         &mt RSHFT BSPC
+      &mt LGUI DEL  &mt LALT ESC     &mt LSHFT TAB
+                                                      &lt 1 RET        &ht_tp RCTRL SPC  &ht_bl RSHFT BSPC
     >;
   };
 
