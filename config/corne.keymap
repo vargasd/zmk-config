@@ -108,7 +108,7 @@ combos {
   };
   left_index_middle {
     key-positions = <15 16>;
-    bindings = <&kp SPC>;
+    bindings = <&lt 2 SPC>;
   };
   left_index_middle_ring {
     key-positions = <14 15 16>;
@@ -129,7 +129,7 @@ behaviors {
     #binding-cells = <2>;
     flavor = "balanced";
     tapping-term-ms = <200>;
-    quick-tap-ms = <150>;
+    quick-tap-ms = <175>;
     bindings = <&kp>, <&kp>;
   };
 };
@@ -157,31 +157,31 @@ keymap {
   lower_layer {
     bindings = <
       // ROW 1
-      &kp C_BRI_UP  &kp N0           &kp N3           &kp N2           &kp N1            &kp N0
-      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &kp C_PREV
+      &trans        &kp N0           &kp N3           &kp N2           &kp N1            &kp N0
+      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &trans
       // ROW 2
-      &bt BT_CLR    &kp N0           &kp N6           &kp N5           &kp N4            &kp N0
-      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &bt BT_CLR        &kp C_PP
+      &trans        &kp N0           &kp N6           &kp N5           &kp N4            &kp N0
+      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &bt BT_CLR        &trans
       // ROW 3
-      &kp C_BRI_DN  &kp N0           &kp N9           &kp N8           &kp N7            &kp N0
-      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_NEXT
+      &trans        &kp N0           &kp N9           &kp N8           &kp N7            &kp N0
+      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &trans
       // THUMBS
-      &trans        &mt LSHFT ESC    &trans
-                                                      &trans           &mt RSHFT SPC     &trans
+      &trans        &trans           &trans
+                                                      &trans           &trans            &trans
     >;
   };
 
   raise_layer {
     bindings = <
       // ROW 1
-      &kp C_BRI_UP  &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp HOME      &kp PG_DN        &kp PG_UP        &kp END          &trans            &kp C_PREV
+      &trans        &kp N0           &kp N3           &kp N2           &kp N1            &kp N0
+      &kp N0        &kp N7           &kp N8           &kp N9           &kp N0            &trans
       // ROW 2
-      &bt BT_CLR    &kp F6           &kp F7           &kp F8           &kp F9            &kp F10
-      &kp LEFT      &kp DOWN         &kp UP           &kp RIGHT        &trans            &kp C_PP
+      &trans        &kp N0           &kp N6           &kp N5           &kp N4            &kp N0
+      &kp N0        &kp N4           &kp N5           &kp N6           &kp N0            &trans
       // ROW 3
-      &kp C_BRI_DN  &kp F11          &kp F12          &kp K_MUTE       &kp K_VOL_DN      &kp K_VOL_UP
-      &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4      &kp C_NEXT
+      &trans        &kp N0           &kp N9           &kp N8           &kp N7            &kp N0
+      &kp N0        &kp N1           &kp N2           &kp N3           &kp N0            &trans
       // THUMBS
       &trans        &trans           &trans
                                                       &trans           &trans            &trans
