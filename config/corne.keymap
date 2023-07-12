@@ -106,13 +106,13 @@ combos {
     key-positions = <8 21>;
     bindings = <&kp PERCENT>;
   };
-  left_index_middle_ring {
-    key-positions = <14 15 16>;
+  left_index_middle {
+    key-positions = <15 16>;
     bindings = <&kp SPC>;
   };
-  inner_right_thumb {
-    key-positions = <39 40>;
-    bindings = <&mt RC(RSHFT) RC(SPC)>;
+  left_middle_ring {
+    key-positions = <14 15>;
+    bindings = <&kp RET>;
   };
 };
 
@@ -129,7 +129,7 @@ behaviors {
     #binding-cells = <2>;
     flavor = "balanced";
     tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
+    quick-tap-ms = <150>;
     bindings = <&kp>, <&kp>;
   };
 };
