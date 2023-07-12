@@ -110,8 +110,8 @@ combos {
     key-positions = <15 16>;
     bindings = <&kp SPC>;
   };
-  left_middle_ring {
-    key-positions = <14 15>;
+  left_index_middle_ring {
+    key-positions = <14 15 16>;
     bindings = <&kp RET>;
   };
 };
