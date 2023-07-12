@@ -24,20 +24,16 @@ combos {
   };
   right_index_middle {
     key-positions = <19 20>;
-    bindings = <&mt RGUI LPAR>;
+    bindings = <&kp LPAR>;
   };
   right_middle_ring {
     key-positions = <20 21>;
-    bindings = <&mt RALT RPAR>;
+    bindings = <&kp RPAR>;
   };
   right_index_middle_ring {
     key-positions = <19 20 21>;
-    bindings = <&kp RG(RALT)>;
-  };
-  right_ring_pinky {
-    key-positions = <21 22>;
     bindings = <&kp TAB>;
-  };
+  };',
   right_index_stretch_up {
     key-positions = <6 18>;
     bindings = <&kp GRAVE>;
@@ -112,15 +108,15 @@ combos {
   };
   left_index_middle {
     key-positions = <15 16>;
-    bindings = <&mt LGUI N0>;
+    bindings = <&kp N0>;
   };
   left_middle_ring {
     key-positions = <14 15>;
-    bindings = <&mt LALT N1>;
+    bindings = <&kp N1>;
   };
   left_index_middle_ring {
     key-positions = <14 15 16>;
-    bindings = <&kp RG(RALT)>;
+    bindings = <&kp SPC>;
   };
   left_index_up {
     key-positions = <4 16>;
