@@ -167,6 +167,15 @@ behaviors {
     #binding-cells = <0>;
     bindings = <&kp LSHFT>, <&caps_word>;
   };
+  ht_bl {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOLD_TAP_BALANCED";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <125>;
+    bindings = <&kp>, <&kp>;
+  };
 };
 
 keymap {
@@ -185,7 +194,7 @@ keymap {
       &kp N         &kp M            &kp COMMA        &kp DOT          &kp FSLH          &trans
       // THUMBS
       &mt LGUI DEL  &mt LALT ESC     &mt LSHFT TAB
-                                                      &lt 1 RET        &ht_tp RCTRL SPC  &ht_bl RSHFT BSPC
+                                                      &lt 1 RET        &ht_bl RCTRL SPC  &ht_bl RSHFT BSPC
     >;
   };
 
