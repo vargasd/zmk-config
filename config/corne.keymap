@@ -106,49 +106,9 @@ combos {
     key-positions = <8 21>;
     bindings = <&kp PERCENT>;
   };
-  left_index_middle {
-    key-positions = <15 16>;
-    bindings = <&kp N0>;
-  };
-  left_middle_ring {
-    key-positions = <14 15>;
-    bindings = <&kp N1>;
-  };
   left_index_middle_ring {
     key-positions = <14 15 16>;
     bindings = <&kp SPC>;
-  };
-  left_index_up {
-    key-positions = <4 16>;
-    bindings = <&kp N2>;
-  };
-  left_middle_up {
-    key-positions = <3 15>;
-    bindings = <&kp N3>;
-  };
-  left_ring_up {
-    key-positions = <2 14>;
-    bindings = <&kp N4>;
-  };
-  left_index_down {
-    key-positions = <16 28>;
-    bindings = <&kp N5>;
-  };
-  left_middle_down {
-    key-positions = <15 27>;
-    bindings = <&kp N6>;
-  };
-  left_ring_down {
-    key-positions = <14 26>;
-    bindings = <&kp N7>;
-  };
-  left_index_middle_down {
-    key-positions = <27 28>;
-    bindings = <&kp N8>;
-  };
-  left_index_middle_ring_down {
-    key-positions = <26 27>;
-    bindings = <&kp N9>;
   };
   inner_right_thumb {
     key-positions = <39 40>;
