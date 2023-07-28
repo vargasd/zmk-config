@@ -178,12 +178,12 @@ keymap {
       // ROW 2
       &trans
       &kp GRAVE       &kp SQT          &kp MINUS        &kp EQUAL      &kp BSLH
-      &kp LEFT        &kp DOWN         &kp UP           &kp RIGHT      &ext_power EP_OFF
+      &kp LEFT        &kp DOWN         &kp UP           &kp RIGHT      &kp SQT
       &trans
       // ROW 3
       &trans
       &kp TILDE       &kp DQT          &kp UNDER        &kp PLUS       &kp PIPE
-      &kp HOME        &kp PG_DN        &kp PG_UP        &kp END        &trans
+      &kp HOME        &kp PG_DN        &kp PG_UP        &kp END        &ext_power EP_OFF
       &trans
       // THUMBS
       &trans          &trans           &trans
