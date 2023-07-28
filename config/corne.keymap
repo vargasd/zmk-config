@@ -12,6 +12,39 @@
 / {
 combos {
   compatible = "zmk,combos";
+  left_index_up {
+    key-positions = <4 16>;
+    bindings = <&kp LPAR>;
+  };
+  left_index_stretch_up {
+    key-positions = <5 17>;
+    bindings = <&kp RPAR>;
+  };
+  left_index_down {
+    key-positions = <16 28>;
+    bindings = <&kp LPAR>;
+  };
+  left_index_stretch_down {
+    key-positions = <17 29>;
+    bindings = <&kp RPAR>;
+  };
+  right_index_stretch_up {
+    key-positions = <6 18>;
+    bindings = <&kp LBKT>;
+  };
+  right_index_up {
+    key-positions = <7 19>;
+    bindings = <&kp RBKT>;
+  };
+  right_index_stretch_down {
+    key-positions = <18 30>;
+    bindings = <&kp LBRC>;
+  };
+  right_index_down {
+    key-positions = <19 31>;
+    bindings = <&kp RBRC>;
+  };
+  /*
   right_index_middle_top {
     timeout-ms = <25>;
     key-positions = <7 8>;
@@ -34,22 +67,6 @@ combos {
   right_index_middle_ring {
     key-positions = <19 20 21>;
     bindings = <&kp TAB>;
-  };
-  right_index_stretch_up {
-    key-positions = <6 18>;
-    bindings = <&kp SQT>;
-  };
-  left_index_stretch_up {
-    key-positions = <18 30>;
-    bindings = <&kp GRAVE>;
-  };
-  left_index_up {
-    key-positions = <4 16>;
-    bindings = <&kp LBKT>;
-  };
-  right_index_up {
-    key-positions = <7 19>;
-    bindings = <&kp RBKT>;
   };
   right_middle_up {
     key-positions = <8 20>;
@@ -79,18 +96,11 @@ combos {
     key-positions = <30 31>;
     bindings = <&kp DOLLAR>;
   };
-  left_index_down {
-    key-positions = <16 28>;
-    bindings = <&kp LBRC>;
-  };
-  right_index_down {
-    key-positions = <19 31>;
-    bindings = <&kp RBRC>;
-  };
   right_middle_down {
     key-positions = <20 32>;
     bindings = <&kp AT>;
   };
+  */
   left_index_middle {
     key-positions = <15 16>;
     bindings = <&lt 2 SPC>;
