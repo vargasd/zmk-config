@@ -37,31 +37,23 @@ combos {
   };
   right_index_stretch_up {
     key-positions = <6 18>;
+    bindings = <&kp SQT>;
+  };
+  left_index_stretch_up {
+    key-positions = <18 30>;
     bindings = <&kp GRAVE>;
   };
-  right_index_stretch_down {
-    key-positions = <18 30>;
-    bindings = <&kp PIPE>;
+  left_index_up {
+    key-positions = <4 16>;
+    bindings = <&kp LBKT>;
   };
   right_index_up {
     key-positions = <7 19>;
-    bindings = <&kp SQT>;
+    bindings = <&kp RBKT>;
   };
   right_middle_up {
     key-positions = <8 20>;
     bindings = <&kp MINUS>;
-  };
-  right_ring_up {
-    key-positions = <9 21>;
-    bindings = <&kp EQUAL>;
-  };
-  right_pinky_up {
-    key-positions = <10 22>;
-    bindings = <&kp BSLH>;
-  };
-  right_pinky_down {
-    key-positions = <22 34>;
-    bindings = <&kp BSLH>;
   };
   right_index_middle_bottom {
     key-positions = <31 32>;
@@ -71,9 +63,13 @@ combos {
     key-positions = <32 33>;
     bindings = <&kp RBRC>;
   };
+  left_index_horizontal {
+    key-positions = <16 17>;
+    bindings = <&kp LPAR>;
+  };
   right_index_horizontal {
     key-positions = <18 19>;
-    bindings = <&kp AMPS>;
+    bindings = <&kp RPAR>;
   };
   right_index_top_horiztontal {
     key-positions = <6 7>;
@@ -83,32 +79,17 @@ combos {
     key-positions = <30 31>;
     bindings = <&kp DOLLAR>;
   };
+  left_index_down {
+    key-positions = <16 28>;
+    bindings = <&kp LBRC>;
+  };
   right_index_down {
     key-positions = <19 31>;
-    bindings = <&kp EXCL>;
+    bindings = <&kp RBRC>;
   };
   right_middle_down {
     key-positions = <20 32>;
     bindings = <&kp AT>;
-  };
-  right_ring_down {
-    key-positions = <21 33>;
-    bindings = <&kp HASH>;
-  };
-  right_home_up {
-    timeout-ms = <25>;
-    key-positions = <8 19>;
-    bindings = <&kp CARET>;
-  };
-  right_up_home {
-    timeout-ms = <25>;
-    key-positions = <7 20>;
-    bindings = <&kp PERCENT>;
-  };
-  right_middle_up_home {
-    timeout-ms = <25>;
-    key-positions = <8 21>;
-    bindings = <&kp PERCENT>;
   };
   left_index_middle {
     key-positions = <15 16>;
@@ -180,19 +161,19 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &kp BANG        &kp AT           &kp HASH         &kp LBKT       &kp RBKT
-      &kp HOME        &kp PG_DN        &kp PG_UP        &kp END        &trans
+      &kp BANG        &kp AT           &kp HASH        &kp DOLLAR     &kp PERCENT
+      &kp CARET       &kp AMPS         &kp STAR        &kp LPAR       &kp RPAR
 
       &trans
       // ROW 2
       &trans
-      &kp CARET       &kp AMPS         &kp EQUAL        &kp LPAR       &kp RPAR
+      &kp GRAVE       &kp SQT          &kp MINUS        &kp EQUAL      &kp BSLH
       &kp LEFT        &kp DOWN         &kp UP           &kp RIGHT      &ext_power EP_OFF
       &trans
       // ROW 3
       &trans
-      &kp DOLLAR      &kp PERCENT      &kp STAR         &kp UNDER      &kp BSLH
-      &trans          &trans           &trans           &trans         &trans
+      &kp TILDE       &kp DQT          &kp UNDER        &kp PLUS       &kp PIPE
+      &kp HOME        &kp PG_DN        &kp PG_UP        &kp END        &trans
       &trans
       // THUMBS
       &trans          &trans           &trans
