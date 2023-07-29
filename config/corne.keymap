@@ -20,20 +20,20 @@ combos {
     key-positions = <20 21>;
     bindings = <&kp RPAR>;
   };
-  right_index_stretch_up {
-    key-positions = <6 18>;
-    bindings = <&kp LBKT>;
-  };
   right_index_up {
     key-positions = <7 19>;
-    bindings = <&kp RBKT>;
+    bindings = <&kp LBKT>;
   };
-  right_index_stretch_down {
-    key-positions = <18 30>;
-    bindings = <&kp LBRC>;
+  right_middle_up {
+    key-positions = <8 20>;
+    bindings = <&kp RBKT>;
   };
   right_index_down {
     key-positions = <19 31>;
+    bindings = <&kp LBRC>;
+  };
+  right_middle_down {
+    key-positions = <20 32>;
     bindings = <&kp RBRC>;
   };
   /*
