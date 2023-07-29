@@ -12,20 +12,12 @@
 / {
 combos {
   compatible = "zmk,combos";
-  left_index_up {
-    key-positions = <4 16>;
+  right_index_middle {
+    key-positions = <19 20>;
     bindings = <&kp LPAR>;
   };
-  left_index_stretch_up {
-    key-positions = <5 17>;
-    bindings = <&kp RPAR>;
-  };
-  left_index_down {
-    key-positions = <16 28>;
-    bindings = <&kp LPAR>;
-  };
-  left_index_stretch_down {
-    key-positions = <17 29>;
+  right_middle_ring {
+    key-positions = <20 21>;
     bindings = <&kp RPAR>;
   };
   right_index_stretch_up {
@@ -80,14 +72,6 @@ combos {
     key-positions = <32 33>;
     bindings = <&kp RBRC>;
   };
-  left_index_horizontal {
-    key-positions = <16 17>;
-    bindings = <&kp LPAR>;
-  };
-  right_index_horizontal {
-    key-positions = <18 19>;
-    bindings = <&kp RPAR>;
-  };
   right_index_top_horiztontal {
     key-positions = <6 7>;
     bindings = <&kp STAR>;
@@ -107,7 +91,7 @@ combos {
   };
   left_index_middle_ring {
     key-positions = <14 15 16>;
-    bindings = <&kp RET>;
+    bindings = <&kp LC(SPC)>;
   };
   outer_thumbs {
     key-positions = <36 37 40 41>;
