@@ -84,14 +84,18 @@ combos {
     key-positions = <20 32>;
     bindings = <&kp AT>;
   };
-  */
   left_index_middle {
     key-positions = <15 16>;
     bindings = <&lt 2 SPC>;
   };
+  */
   left_index_middle_ring {
     key-positions = <14 15 16>;
-    bindings = <&kp LC(SPC)>;
+    bindings = <&lt 2 LC(SPC)>;
+  };
+  left_thumb_stretch {
+    key-positions = <29 37>;
+    bindings = <&mo 2>;
   };
   outer_thumbs {
     key-positions = <36 37 40 41>;
