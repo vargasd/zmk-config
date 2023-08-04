@@ -93,10 +93,6 @@ combos {
     key-positions = <14 15 16>;
     bindings = <&lt 2 LC(SPC)>;
   };
-  left_thumb_stretch {
-    key-positions = <29 37>;
-    bindings = <&mo 2>;
-  };
   outer_thumbs {
     key-positions = <36 37 40 41>;
     bindings = <&mo 3>;
@@ -141,7 +137,7 @@ keymap {
       &trans
       // ROW 2
       &trans
-      &kp A           &kp S            &kp D            &kp F          &kp G
+      &kp A           &lt 2 S          &kp D            &kp F          &kp G
       &cmd_h_tab      &kp J            &kp K            &kp L          &kp SEMI
       &trans
       // ROW 3
@@ -183,7 +179,7 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &kp C_PREV      &kp C_VOL_UP     &trans           &trans         &trans
+      &kp C_PREV      &trans           &kp C_VOL_UP     &trans         &trans
       &kp EQUAL       &kp N7           &kp N8           &kp N9         &kp PLUS
       &trans
       // ROW 2
@@ -193,7 +189,7 @@ keymap {
       &trans
       // ROW 3
       &trans
-      &kp C_NEXT      &kp C_VOL_DN     &trans           &trans         &trans
+      &kp C_NEXT      &trans           &kp C_VOL_DN     &trans         &trans
       &kp N0          &kp N1           &kp N2           &kp N3         &kp MINUS
       &trans
       // THUMBS
