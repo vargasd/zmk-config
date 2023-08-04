@@ -36,59 +36,6 @@ combos {
     key-positions = <20 32>;
     bindings = <&kp RBRC>;
   };
-  /*
-  right_index_middle_top {
-    timeout-ms = <25>;
-    key-positions = <7 8>;
-    bindings = <&kp LBKT>;
-  };
-  right_middle_ring_top {
-    // io is too common
-    timeout-ms = <25>;
-    key-positions = <8 9>;
-    bindings = <&kp RBKT>;
-  };
-  right_index_middle {
-    key-positions = <19 20>;
-    bindings = <&kp LPAR>;
-  };
-  right_middle_ring {
-    key-positions = <20 21>;
-    bindings = <&kp RPAR>;
-  };
-  right_index_middle_ring {
-    key-positions = <19 20 21>;
-    bindings = <&kp TAB>;
-  };
-  right_middle_up {
-    key-positions = <8 20>;
-    bindings = <&kp MINUS>;
-  };
-  right_index_middle_bottom {
-    key-positions = <31 32>;
-    bindings = <&kp LBRC>;
-  };
-  right_middle_ring_bottom {
-    key-positions = <32 33>;
-    bindings = <&kp RBRC>;
-  };
-  right_index_top_horiztontal {
-    key-positions = <6 7>;
-    bindings = <&kp STAR>;
-  };
-  right_index_bottom_horizontal {
-    key-positions = <30 31>;
-    bindings = <&kp DOLLAR>;
-  };
-  right_middle_down {
-    key-positions = <20 32>;
-    bindings = <&kp AT>;
-  };
-  left_index_middle {
-    key-positions = <15 16>;
-    bindings = <&lt 2 SPC>;
-  };
-  */
   left_index_middle_ring {
     key-positions = <14 15 16>;
     bindings = <&lt 2 LC(SPC)>;
@@ -179,17 +126,17 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &kp C_PREV      &trans           &kp C_VOL_UP     &trans         &trans
+      &trans          &trans           &trans           &trans         &trans
       &kp EQUAL       &kp N7           &kp N8           &kp N9         &kp PLUS
       &trans
       // ROW 2
       &trans
-      &kp C_PP        &trans           &trans           &trans         &trans
+      &trans          &trans           &trans           &trans         &trans
       &kp DOT         &kp N4           &kp N5           &kp N6         &kp UNDER
       &trans
       // ROW 3
       &trans
-      &kp C_NEXT      &trans           &kp C_VOL_DN     &trans         &trans
+      &trans          &trans           &trans           &trans         &trans
       &kp N0          &kp N1           &kp N2           &kp N3         &kp MINUS
       &trans
       // THUMBS
@@ -203,12 +150,12 @@ keymap {
       // ROW 1
       &trans
       &kp F1          &kp F2           &kp F3           &kp F4         &kp F5
-      &trans          &trans           &trans           &trans         &bt BT_CLR
+      &kp C_VOL_UP    &trans           &trans           &trans         &bt BT_CLR
       &trans
       // ROW 2
       &trans
       &kp F6          &kp F7           &kp F8           &kp F9         &kp F10
-      &trans          &trans           &trans           &trans         &ext_power EP_OFF
+      &kp C_VOL_DN    &kp C_PREV       &kp C_PP         &kp C_NEXT     &ext_power EP_OFF
       &trans
       // ROW 3
       &trans
