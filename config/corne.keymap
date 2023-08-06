@@ -47,11 +47,12 @@ combos {
 };
 
 behaviors {
-  td_cap_word: tap_dance_mod_tap {
+  td_mt_shift_tab: tap_dance_mod_tap {
     compatible = "zmk,behavior-tap-dance";
-    label = "td_cap_word";
+    label = "td_mt_shift_tab";
     #binding-cells = <0>;
-    bindings = <&kp LSHFT>, <&caps_word>;
+    tapping-term-ms = <200>;
+    bindings = <&mt LSHIFT TAB>, <&kp TAB>;
   };
   ht_bl: hold_tap_balanced {
     compatible = "zmk,behavior-hold-tap";
@@ -93,7 +94,7 @@ keymap {
       &kp N           &kp M            &kp COMMA        &kp DOT        &kp FSLH
       &trans
       // THUMBS
-      &mt LALT DEL    &mt LGUI ESC     &mt LSHFT TAB
+      &mt LALT DEL    &mt LGUI ESC     &td_mt_shift_tab
                                                         &mt RCTRL RET  &lt 1 SPC       &ht_bl RSHFT BSPC
     >;
   };
