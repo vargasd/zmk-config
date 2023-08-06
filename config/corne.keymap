@@ -47,23 +47,23 @@ combos {
 };
 
 behaviors {
-  ht_hp: hold_tap_hold_preferred {
+  mt2: mod_tap_tap_dancw {
     compatible = "zmk,behavior-hold-tap";
-    label = "HOLD_TAP_HOLD_PREFERRED ";
+    label = "mod_tap_tap_dancw";
     #binding-cells = <2>;
     flavor = "hold-preferred";
     tapping-term-ms = <250>;
     quick-tap-ms = <200>;
     bindings = <&kp>, <&kp>;
   };
-  ht_bl: hold_tap_balanced {
+  lt2: layer_tap_tap_dance {
     compatible = "zmk,behavior-hold-tap";
-    label = "HOLD_TAP_BALANCED";
+    label = "layer_tap_tap_dance";
     #binding-cells = <2>;
     flavor = "balanced";
     tapping-term-ms = <250>;
     quick-tap-ms = <200>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&mo>, <&kp>;
   };
   cmd_h_tab: cmd_h_tab_mod_morph {
     compatible = "zmk,behavior-mod-morph";
@@ -96,8 +96,8 @@ keymap {
       &kp N           &kp M            &kp COMMA        &kp DOT        &kp FSLH
       &trans
       // THUMBS
-      &mt LALT DEL    &mt LGUI ESC     &ht_hp LSHIFT TAB
-                                                        &mt RCTRL RET  &lt 1 SPC       &ht_bl RSHFT BSPC
+      &mt LALT DEL    &mt LGUI ESC     &mt2 LSHIFT TAB
+                                                        &mt RCTRL RET  &lt2 1 SPC      &mt2 RSHFT BSPC
     >;
   };
 
