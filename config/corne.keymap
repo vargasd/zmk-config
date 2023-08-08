@@ -96,7 +96,7 @@ keymap {
       &kp N           &kp M            &kp COMMA        &kp DOT        &kp FSLH
       &trans
       // THUMBS
-      &mt LALT DEL    &mt LGUI ESC     &mt2 LSHIFT TAB
+      &mt2 LALT DEL   &mt LGUI ESC     &mt2 LSHIFT TAB
                                                         &mt RCTRL RET  &lt2 1 SPC      &mt2 RSHFT BSPC
     >;
   };
