@@ -44,14 +44,6 @@ combos {
     key-positions = <36 37 40 41>;
     bindings = <&mo 3>;
   };
-  down_fallback {
-    key-positions = <19 40>;
-    bindings = <&kp DOWN>;
-  };
-  up_fallback {
-    key-positions = <20 40>;
-    bindings = <&kp UP>;
-  };
 };
 
 behaviors {
@@ -119,12 +111,12 @@ keymap {
       &trans
       // ROW 2
       &trans
-      &kp GRAVE       &kp SQT          &kp MINUS        &kp EQUAL      &kp BSLH
+      &kp GRAVE       &kp MINUS        &kp SQT          &kp EQUAL      &kp BSLH
       &kp LEFT        &kp DOWN         &kp UP           &kp RIGHT      &kp SQT
       &trans
       // ROW 3
       &trans
-      &kp TILDE       &kp DQT          &kp UNDER        &kp PLUS       &kp PIPE
+      &kp TILDE       &kp UNDER        &kp DQT          &kp PLUS       &kp PIPE
       &kp HOME        &kp PG_DN        &kp PG_UP        &kp END        &ext_power EP_OFF
       &trans
       // THUMBS
