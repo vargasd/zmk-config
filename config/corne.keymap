@@ -44,6 +44,14 @@ combos {
     key-positions = <36 37 40 41>;
     bindings = <&mo 3>;
   };
+  down_fallback {
+    key-positions = <19 40>;
+    bindings = <&kp DOWN>;
+  };
+  up_fallback {
+    key-positions = <20 40>;
+    bindings = <&kp UP>;
+  };
 };
 
 behaviors {
