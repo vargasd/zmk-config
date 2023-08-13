@@ -40,10 +40,6 @@ combos {
     key-positions = <14 15 16>;
     bindings = <&lt 2 LC(SPC)>;
   };
-  outer_thumbs {
-    key-positions = <36 37 40 41>;
-    bindings = <&mo 3>;
-  };
 };
 
 behaviors {
@@ -119,7 +115,7 @@ keymap {
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          &ext_power EP_OFF
       &trans
       // THUMBS
-      &trans           &trans           &trans
+      &trans           &trans           &lt2 3 TAB
                                                          &trans           &trans           &trans
     >;
   };
