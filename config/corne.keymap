@@ -38,14 +38,14 @@ combos {
   };
   left_index_middle_ring {
     key-positions = <14 15 16>;
-    bindings = <&lt 2 LC(SPC)>;
+    bindings = <&kp LC(SPC)>;
   };
 };
 
 behaviors {
-  mt2: mod_tap_tap_dancw {
+  mt2: mod_tap_tap_dance {
     compatible = "zmk,behavior-hold-tap";
-    label = "mod_tap_tap_dancw";
+    label = "mod_tap_tap_dance";
     #binding-cells = <2>;
     flavor = "hold-preferred";
     tapping-term-ms = <250>;
