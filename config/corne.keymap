@@ -40,6 +40,12 @@ combos {
     key-positions = <14 15 16>;
     bindings = <&kp LC(SPC)>;
   };
+  left_arrow {
+    key-positions = <18 40>;
+    bindings = <&mo_kp 2 LEFT>;
+    timeout-ms = <125>;
+    slow-release;
+  };
   down_arrow {
     key-positions = <19 40>;
     bindings = <&mo_kp 2 DOWN>;
@@ -52,9 +58,16 @@ combos {
     timeout-ms = <125>;
     slow-release;
   };
+  right_arrow {
+    key-positions = <21 40>;
+    bindings = <&mo_kp 2 RIGHT>;
+    timeout-ms = <125>;
+    slow-release;
+  };
 };
 
 macros {
+  // allows layer tap to act as hold-preferred with specific combos
   mo_kp: mo_kp {
     label = "momentary_layer_with_key_tap";
     compatible = "zmk,behavior-macro-two-param";
@@ -91,7 +104,7 @@ behaviors {
     quick-tap-ms = <200>;
     bindings = <&mo>, <&kp>;
   };
-  rhlt: layer_tap_right_side_only {
+  lt_rh: layer_tap_right_side_only {
     compatible = "zmk,behavior-hold-tap";
     label = "layer_tap_right_side_only";
     #binding-cells = <2>;
@@ -128,7 +141,7 @@ keymap {
       &trans
       // ROW 2
       &trans
-      &kp A            &rhlt 1 S        &kp D            &kp F            &kp G
+      &kp A            &lt_rh 1 S       &kp D            &kp F            &kp G
       &cmd_h_tab       &kp J            &kp K            &kp L            &kp SEMI
       &trans
       // ROW 3
