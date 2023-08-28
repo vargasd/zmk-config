@@ -43,25 +43,25 @@ combos {
   left_arrow {
     key-positions = <18 40>;
     bindings = <&mo_kp 2 LEFT>;
-    timeout-ms = <125>;
+    timeout-ms = <100>;
     slow-release;
   };
   down_arrow {
     key-positions = <19 40>;
     bindings = <&mo_kp 2 DOWN>;
-    timeout-ms = <125>;
+    timeout-ms = <100>;
     slow-release;
   };
   up_arrow {
     key-positions = <20 40>;
     bindings = <&mo_kp 2 UP>;
-    timeout-ms = <125>;
+    timeout-ms = <100>;
     slow-release;
   };
   right_arrow {
     key-positions = <21 40>;
     bindings = <&mo_kp 2 RIGHT>;
-    timeout-ms = <125>;
+    timeout-ms = <100>;
     slow-release;
   };
 };
