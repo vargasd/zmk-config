@@ -36,10 +36,6 @@ combos {
     key-positions = <20 32>;
     bindings = <&kp RBRC>;
   };
-  left_index_middle_ring {
-    key-positions = <14 15 16>;
-    bindings = <&kp LC(SPC)>;
-  };
   down_arrow {
     key-positions = <19 40>;
     bindings = <&mo_kp 2 DOWN>;
@@ -175,7 +171,7 @@ keymap {
       // ROW 2
       &trans
       &kp GRAVE        &kp MINUS        &kp EQUAL        &kp SQT          &kp BSLH
-      &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp SQT
+      &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp RC(SPC)
       &trans
       // ROW 3
       &trans
