@@ -171,7 +171,7 @@ keymap {
       // ROW 2
       &trans
       &kp GRAVE        &kp MINUS        &kp EQUAL        &kp SQT          &kp BSLH
-      &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp RC(SPC)
+      &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp SQT
       &trans
       // ROW 3
       &trans
@@ -179,7 +179,7 @@ keymap {
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          &ext_power EP_OFF
       &trans
       // THUMBS
-      &trans           &trans           &lt2 3 TAB
+      &trans           &trans           &lt2 3 LC(SPC)
                                                          &trans           &trans           &trans
     >;
   };
