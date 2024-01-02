@@ -125,7 +125,7 @@ keymap {
       // ROW 2
       &trans
       &kp A            &rhlt 1 S        &kp D            &kp F            &kp G
-      &cmd_h_tab       &kp J            &kp K            &kp L            &kp SEMI
+      &cmd_h_tab       &kp J            &kp K            &kp L            &mt2 GLOBE SEMI
       &trans
       // ROW 3
       &trans
