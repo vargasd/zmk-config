@@ -130,7 +130,7 @@ keymap {
       // ROW 3
       &trans
       &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &kp COMMA        &mt2 RG(RALT) DOT &kp FSLH
+      &kp N            &kp M            &kp COMMA        &mt2 LC(LS(LALT)) DOT &kp FSLH
       &trans
       // THUMBS
       &mt2 LALT DEL    &mt LGUI ESC     &mt2 LSHIFT TAB
