@@ -9,6 +9,16 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define QUICK_TAP_MS 175
+
+&mt {
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&lt {
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
+
 / {
 combos {
   compatible = "zmk,combos";
@@ -69,24 +79,6 @@ macros {
 };
 
 behaviors {
-  mt2: mod_tap_tap_dance {
-    compatible = "zmk,behavior-hold-tap";
-    label = "mod_tap_tap_dance";
-    #binding-cells = <2>;
-    flavor = "hold-preferred";
-    tapping-term-ms = <250>;
-    quick-tap-ms = <200>;
-    bindings = <&kp>, <&kp>;
-  };
-  lt2: layer_tap_tap_dance {
-    compatible = "zmk,behavior-hold-tap";
-    label = "layer_tap_tap_dance";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <200>;
-    bindings = <&mo>, <&kp>;
-  };
   rhlt: layer_tap_right_side_only {
     compatible = "zmk,behavior-hold-tap";
     label = "layer_tap_right_side_only";
@@ -130,11 +122,11 @@ keymap {
       // ROW 3
       &trans
       &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &kp COMMA        &mt2 LC(LS(LALT)) DOT &kp FSLH
+      &kp N            &kp M            &kp COMMA        &mt LC(LS(LALT)) DOT &kp FSLH
       &trans
       // THUMBS
-      &mt2 LALT DEL    &mt LGUI ESC     &mt2 LSHIFT TAB
-                                                         &mt RCTRL RET     &lt2 2 SPC       &mt2 RSHFT BSPC
+      &mt LALT DEL     &mt LGUI ESC     &mt LSHIFT TAB
+                                                         &mt RCTRL RET     &lt 2 SPC       &mt RSHFT BSPC
     >;
   };
 
