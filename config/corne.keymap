@@ -137,8 +137,8 @@ keymap {
       &trans
       // ROW 2
       &trans
-      &kp A            &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
-      &kp H            &rhm LGUI J      &rhm LALT K      &rhm LCTRL L      &kp SEMI
+      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
+      &kp H            &rhm LGUI J      &rhm LALT K      &rhm LCTRL L      &rhm LSHFT SEMI
       &trans
       // ROW 3
       &trans
