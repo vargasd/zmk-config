@@ -83,8 +83,8 @@ behaviors {
   lhm: left_home_row_mod {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    flavor = "tap-unless-interrupted";
-    tapping-term-ms = <200>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
     hold-trigger-on-release;
@@ -100,8 +100,8 @@ behaviors {
   rhm: right_home_row_mod {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    flavor = "tap-unless-interrupted";
-    tapping-term-ms = <200>;
+    flavor = "balanced";
+    tapping-term-ms = <280>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
     hold-trigger-on-release;
