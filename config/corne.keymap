@@ -18,6 +18,7 @@
 
 &lt {
   quick-tap-ms = <QUICK_TAP_MS>;
+  flavor = "hold-preferred";
 };
 
 / {
@@ -114,14 +115,14 @@ behaviors {
                39 40 41
     >;
   };
-  // tp: mod_tap_preferred {
-  //   compatible = "zmk,behavior-hold-tap";
-  //   #binding-cells = <2>;
-  //   flavor = "tap-preferred";
-  //   tapping-term-ms = <280>;
-  //   quick-tap-ms = <QUICK_TAP_MS>;
-  //   bindings = <&kp>, <&kp>;
-  // };
+  tp: mod_tap_preferred {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp>, <&kp>;
+  };
 };
 
 keymap {
@@ -145,8 +146,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &rhm MEH DOT      &kp FSLH
       &trans
       // THUMBS
-      &mt LALT DEL     &lt 1 ESC        &mt LSHFT TAB
-                                                         &mt LCTRL SPC     &lt 2 RET       &mt LSHFT BSPC
+      &mt LGUI DEL     &lt 1 ESC        &mt LSHFT TAB
+                                                         &tp RCTRL SPC     &lt 2 RET       &mt RSHFT BSPC
     >;
   };
 
