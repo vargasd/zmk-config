@@ -142,12 +142,12 @@ keymap {
       &trans
       // ROW 3
       &trans
-      &kp Z            &lhm MEH X       &kp C            &kp V             &kp B
-      &kp N            &kp M            &kp COMMA        &rhm MEH DOT      &kp FSLH
+      &kp Z            &kp X            &kp C            &kp V             &kp B
+      &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
       &mt LGUI DEL     &lt 1 ESC        &mt LSHFT TAB
-                                                         &tp RCTRL SPC     &lt 2 RET       &mt RSHFT BSPC
+                                                         &tp RCTRL SPC     &lt 2 RET       &mt MEH BSPC
     >;
   };
 
