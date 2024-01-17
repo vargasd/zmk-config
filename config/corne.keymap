@@ -146,31 +146,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mt LGUI DEL     &lt 1 ESC        &mt LSHFT TAB
-                                                         &tp RCTRL SPC     &lt 2 RET       &mt MEH BSPC
-    >;
-  };
-
-  NUM {
-    bindings = <
-      // ROW 1
-      &trans
-      &trans           &trans           &trans           &trans            &trans
-      &kp EQUAL        &kp N7           &kp N8           &kp N9            &kp PLUS
-      &trans
-      // ROW 2
-      &trans
-      &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &trans
-      &kp DOT          &kp N4           &kp N5           &kp N6            &kp UNDER
-      &trans
-      // ROW 3
-      &trans
-      &trans           &trans           &trans           &trans            &trans
-      &kp N0           &kp N1           &kp N2           &kp N3            &kp MINUS
-      &trans
-      // THUMBS
-      &trans           &trans           &trans
-                                                         &trans            &trans           &trans
+      &mt LGUI DEL     &lt 2 ESC        &mt LSHFT TAB
+                                                         &tp RCTRL SPC     &lt 1 RET       &mt MEH BSPC
     >;
   };
 
@@ -193,6 +170,29 @@ keymap {
       &trans
       // THUMBS
       &trans           &trans           &lt 3 LC(SPC)
+                                                         &trans            &trans           &trans
+    >;
+  };
+
+  NUM {
+    bindings = <
+      // ROW 1
+      &trans
+      &trans           &trans           &trans           &trans            &trans
+      &kp CARET        &kp N7           &kp N8           &kp N9            &kp PLUS
+      &trans
+      // ROW 2
+      &trans
+      &trans           &trans           &trans           &trans            &trans
+      &kp AMPS         &kp N4           &kp N5           &kp N6            &kp STAR
+      &trans
+      // ROW 3
+      &trans
+      &trans           &trans           &trans           &trans            &trans
+      &kp N0           &kp N1           &kp N2           &kp N3            &kp UNDER
+      &trans
+      // THUMBS
+      &trans           &trans           &trans
                                                          &trans            &trans           &trans
     >;
   };
