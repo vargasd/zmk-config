@@ -151,7 +151,7 @@ keymap {
     >;
   };
 
-  SYM_NAV {
+  NAV {
     bindings = <
       // ROW 1
       &trans
@@ -178,17 +178,17 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &trans           &trans           &trans           &trans            &trans
+      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp N7           &kp N8           &kp N9            &kp PLUS
       &trans
       // ROW 2
       &trans
-      &trans           &trans           &trans           &trans            &trans
+      &kp GRAVE        &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp AMPS         &rhm LGUI N4     &rhm LALT N5     &rhm LCTRL N6     &rhm LSHFT STAR
       &trans
       // ROW 3
       &trans
-      &trans           &trans           &trans           &trans            &trans
+      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
       &kp N0           &kp N1           &kp N2           &kp N3            &kp UNDER
       &trans
       // THUMBS
