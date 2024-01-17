@@ -11,6 +11,8 @@
 
 #define QUICK_TAP_MS 200
 #define MEH LC(LS(LALT))
+#define NAV 1
+#define NUM 2
 
 &mt {
   quick-tap-ms = <QUICK_TAP_MS>;
@@ -50,13 +52,13 @@ combos {
   };
   down_arrow {
     key-positions = <19 40>;
-    bindings = <&mo_kp 2 DOWN>;
+    bindings = <&mo_kp NAV DOWN>;
     timeout-ms = <125>;
     slow-release;
   };
   up_arrow {
     key-positions = <20 40>;
-    bindings = <&mo_kp 2 UP>;
+    bindings = <&mo_kp NAV UP>;
     timeout-ms = <125>;
     slow-release;
   };
@@ -146,8 +148,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mt LGUI DEL     &lt 2 ESC        &mt LSHFT TAB
-                                                         &tp RCTRL SPC     &lt 1 RET       &mt MEH BSPC
+      &mt LGUI DEL     &lt NUM ESC      &mt LSHFT TAB
+                                                         &tp RCTRL SPC     &lt NAV RET     &mt MEH BSPC
     >;
   };
 
