@@ -161,7 +161,7 @@ keymap {
       // ROW 2
       &trans
       &kp GRAVE        &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
-      &kp LEFT         &rhm LGUI DOWN   &rhm LALT UP     &rhm LCTRL RIGHT  &ext_power EP_OFF
+      &kp LEFT         &rhm LGUI DOWN   &rhm LALT UP     &rhm LCTRL RIGHT  &kp LSHFT
       &trans
       // ROW 3
       &trans
@@ -184,7 +184,7 @@ keymap {
       // ROW 2
       &trans
       &trans           &trans           &trans           &trans            &trans
-      &kp AMPS         &kp N4           &kp N5           &kp N6            &kp STAR
+      &kp AMPS         &rhm LGUI N4     &rhm LALT N5     &rhm LCTRL N6     &rhm LSHFT STAR
       &trans
       // ROW 3
       &trans
@@ -202,7 +202,7 @@ keymap {
       // ROW 1
       &trans
       &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp C_VOL_UP     &trans           &trans           &trans            &bt BT_CLR
+      &kp C_VOL_UP     &trans           &trans           &trans            &ext_power EP_OFF
       &trans
       // ROW 2
       &trans
