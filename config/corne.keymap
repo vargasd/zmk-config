@@ -152,7 +152,7 @@ keymap {
       // ROW 2
       &trans
       &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
-      &kp H            &rhm LGUI J      &rhm LALT K      &rhm LCTRL L      &rhm LSHFT SEMI
+      &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SEMI
       &trans
       // ROW 3
       &trans
@@ -175,7 +175,7 @@ keymap {
       // ROW 2
       &trans
       &kp GRAVE        &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
-      &kp LEFT         &rhm LGUI DOWN   &rhm LALT UP     &rhm LCTRL RIGHT  &kp LSHFT
+      &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &kp RSHFT
       &trans
       // ROW 3
       &trans
@@ -198,7 +198,7 @@ keymap {
       // ROW 2
       &trans
       &kp GRAVE        &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
-      &kp AMPS         &rhm LGUI N4     &rhm LALT N5     &rhm LCTRL N6     &rhm LSHFT STAR
+      &kp AMPS         &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &rhm RSHFT STAR
       &trans
       // ROW 3
       &trans
@@ -221,7 +221,7 @@ keymap {
       // ROW 2
       &trans
       &kp F6           &kp F7           &kp F8           &kp F9            &kp F10
-      &kp C_VOL_DN     &kp C_PREV       &kp C_PP         &kp C_NEXT        &bt BT_CLR
+      &kp C_VOL_DN     &rhm RGUI C_PREV &rhm RALT C_PP   &rhm RCTRL C_NEXT &bt BT_CLR
       &trans
       // ROW 3
       &trans
