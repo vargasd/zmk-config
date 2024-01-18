@@ -15,7 +15,7 @@
 #define NUM 2
 
 &mt {
-  quick-tap-ms = <QUICK_TAP_MS>;
+  quick-tap-ms = <150>;
 };
 
 &lt {
