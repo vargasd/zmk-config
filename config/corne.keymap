@@ -116,10 +116,10 @@ behaviors {
                39 40 41
     >;
   };
-  lhp: layer_hold_preferred {
+  lbl: layer_balanced {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <280>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&kp>;
@@ -128,6 +128,14 @@ behaviors {
       18 19 20 21 
       30 31 32 33
     >;
+  };
+  lhp: layer_hold_preferred {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&kp>;
   };
   mtp: mod_tap_preferred {
     compatible = "zmk,behavior-hold-tap";
@@ -160,8 +168,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mt LGUI DEL     &lt NUM ESC      &mt LSHFT TAB
-                                                         &mt RCTRL RET     &lt NAV SPC     &mt MEH BSPC
+      &mt LGUI DEL     &lhp NUM ESC     &mt LSHFT TAB
+                                                         &mt RCTRL RET     &lbl NAV SPC       &mt MEH BSPC
     >;
   };
 
