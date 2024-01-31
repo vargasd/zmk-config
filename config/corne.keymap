@@ -10,7 +10,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define QUICK_TAP_MS 200
-#define MEH LC(LS(LALT))
+#define MEH RC(RS(RALT))
+#define HYPER LC(LS(LA(LGUI)))
 #define NAV 1
 #define NUM 2
 
@@ -139,7 +140,7 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mt LGUI DEL     &lhp NUM ESC     &mt LSHFT TAB
+      &mt HYPER DEL    &lhp NUM ESC     &mt LSHFT TAB
                                                          &mqt RCTRL RET    &lspc NAV SPC    &mt MEH BSPC
     >;
   };
