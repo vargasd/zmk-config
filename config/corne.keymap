@@ -95,6 +95,13 @@ behaviors {
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&kp>;
   };
+  mtp: mod_tap_preferred {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    bindings = <&kp>, <&kp>;
+  };
   mqt: mod_quicker_tap {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -140,8 +147,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mt HYPER DEL    &lhp NUM ESC     &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lspc NAV SPC    &mt MEH BSPC
+      &mtp HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtp MEH BSPC
     >;
   };
 
