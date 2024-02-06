@@ -100,6 +100,7 @@ behaviors {
     #binding-cells = <2>;
     flavor = "balanced";
     tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
   };
   mqt: mod_quicker_tap {
