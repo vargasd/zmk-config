@@ -57,7 +57,7 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <280>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
     hold-trigger-on-release;
@@ -74,7 +74,7 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <280>;
+    tapping-term-ms = <250>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
     hold-trigger-on-release;
@@ -95,10 +95,10 @@ behaviors {
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&kp>;
   };
-  mtp: mod_tap_preferred {
+  mtb: mod_tap_balanced {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <200>;
     bindings = <&kp>, <&kp>;
   };
@@ -107,14 +107,14 @@ behaviors {
     #binding-cells = <2>;
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
-    quick-tap-ms = <125>;
+    quick-tap-ms = <133>;
     bindings = <&kp>, <&kp>;
   };
   lspc: layer_space {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <133>;
     quick-tap-ms = <150>;
     bindings = <&mo>, <&kp>;
     hold-trigger-on-release;
@@ -147,8 +147,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mtp HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtp MEH BSPC
+      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
     >;
   };
 
