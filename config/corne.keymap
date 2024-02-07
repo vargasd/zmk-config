@@ -117,6 +117,7 @@ behaviors {
     flavor = "balanced";
     tapping-term-ms = <133>;
     quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
     bindings = <&mo>, <&kp>;
     hold-trigger-on-release;
     hold-trigger-key-positions = <
