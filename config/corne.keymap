@@ -12,8 +12,8 @@
 #define QUICK_TAP_MS 200
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
-#define NAV 1
-#define NUM 2
+#define NUM 1
+#define NAV 2
 
 &mt {
   quick-tap-ms = <QUICK_TAP_MS>;
@@ -154,29 +154,6 @@ keymap {
     >;
   };
 
-  NAV {
-    bindings = <
-      // ROW 1
-      &trans
-      &trans           &trans           &trans           &trans            &trans
-      &kp CARET        &kp AMPS         &kp STAR         &kp LPAR          &kp RPAR
-      &trans
-      // ROW 2
-      &trans
-      &kp LCTRL        &kp LSHFT        &kp LALT         &kp LGUI          &trans
-      &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &kp RCTRL
-      &trans
-      // ROW 3
-      &trans
-      &trans           &trans           &trans           &trans            &trans
-      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
-      &trans
-      // THUMBS
-      &trans           &trans           &lt 3 LC(SPC)
-                                                         &trans            &trans           &trans
-    >;
-  };
-
   NUM {
     bindings = <
       // ROW 1
@@ -196,6 +173,29 @@ keymap {
       &trans
       // THUMBS
       &trans           &trans           &trans
+                                                         &trans            &trans           &trans
+    >;
+  };
+
+  NAV {
+    bindings = <
+      // ROW 1
+      &trans
+      &trans           &trans           &trans           &trans            &trans
+      &kp CARET        &kp AMPS         &kp STAR         &kp LPAR          &kp RPAR
+      &trans
+      // ROW 2
+      &trans
+      &trans           &trans           &trans           &trans            &trans
+      &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &kp RCTRL
+      &trans
+      // ROW 3
+      &trans
+      &trans           &trans           &trans           &trans            &trans
+      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
+      &trans
+      // THUMBS
+      &trans           &trans           &lt 3 LC(SPC)
                                                          &trans            &trans           &trans
     >;
   };
