@@ -158,17 +158,17 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
+      &trans           &trans           &trans           &trans            &trans
       &kp CARET        &kp AMPS         &kp STAR         &kp LPAR          &kp RPAR
       &trans
       // ROW 2
       &trans
-      &lhm LCTRL GRAVE &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
+      &kp LCTRL        &kp LSHFT        &kp LALT         &kp LGUI          &trans
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &kp RCTRL
       &trans
       // ROW 3
       &trans
-      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
+      &trans           &trans           &trans           &trans            &trans
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
       &trans
       // THUMBS
