@@ -163,7 +163,7 @@ keymap {
       // ROW 2
       &trans
       &lhm LCTRL GRAVE &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
-      &kp AMPS         &rhm RGUI N4     &rhm RALT N5     &rhm RSHFT N6     &rhm RCTRL STAR
+      &kp STAR         &rhm RGUI N4     &rhm RALT N5     &rhm RSHFT N6     &rhm RCTRL AMPS
       &trans
       // ROW 3
       &trans
