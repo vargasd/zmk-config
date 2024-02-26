@@ -181,18 +181,18 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &trans           &trans           &trans           &trans            &trans
-      &kp CARET        &kp AMPS         &kp STAR         &kp LPAR          &kp RPAR
+      &none            &none            &none            &none             &none
+      &none            &none            &none            &none             &none
       &trans
       // ROW 2
       &trans
-      &trans           &trans           &trans           &trans            &trans
+      &kp LCTRL        &kp LSHFT        &kp LALT         &kp LGUI          &none
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &kp RCTRL
       &trans
       // ROW 3
       &trans
-      &trans           &trans           &trans           &trans            &trans
-      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
+      &none            &none            &none            &none             &none
+      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &none
       &trans
       // THUMBS
       &trans           &trans           &lt 3 LC(SPC)
