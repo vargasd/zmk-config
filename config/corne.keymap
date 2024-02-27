@@ -118,12 +118,6 @@ behaviors {
     quick-tap-ms = <150>;
     require-prior-idle-ms = <125>;
     bindings = <&mo>, <&kp>;
-    hold-trigger-on-release;
-    hold-trigger-key-positions = <
-      18 19 20 21 
-      30 31 32 33
-      38
-    >;
   };
 };
 
@@ -148,8 +142,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mtb HYPER DEL    &mt LCTRL ESC   &mt LSHFT TAB
-                                                         &lhp NUM RET      &lspc NAV SPC    &mtb MEH BSPC
+      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
     >;
   };
 
@@ -180,17 +174,20 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &none            &none            &none            &none             &none
-      &none            &none            &kp STAR         &none             &none
+      // &none            &none            &none            &none             &none
+      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
+      &kp CARET        &kp AMPS         &kp STAR         &none             &none
       &trans
       // ROW 2
       &trans
-      &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &none
+      // &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &none
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &kp RSHFT
       &trans
       // ROW 3
       &trans
-      &none            &none            &none            &none             &none
+      // &none            &none            &none            &none             &none
+      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &none
       &trans
       // THUMBS
