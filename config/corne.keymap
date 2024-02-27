@@ -181,7 +181,7 @@ keymap {
       // ROW 1
       &trans
       &none            &none            &none            &none             &none
-      &none            &none            &none            &none             &none
+      &none            &none            &kp STAR         &none             &none
       &trans
       // ROW 2
       &trans
