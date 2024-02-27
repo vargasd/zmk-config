@@ -204,12 +204,12 @@ keymap {
       // ROW 1
       &trans
       &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &none             &none
+      &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &none             &bt BT_CLR_ALL
       &trans
       // ROW 2
       &trans
       &lhm LCTRL F6    &lhm LSHFT F7    &lhm LALT F8     &lhm LGUI F9      &kp F10
-      &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &kp RSHFT         &kp RCTRL //&bt BT_CLR
+      &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &kp RSHFT         &kp RCTRL
       &trans
       // ROW 3
       &trans
