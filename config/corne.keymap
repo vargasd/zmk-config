@@ -148,8 +148,8 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       &trans
       // THUMBS
-      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
+      &mtb HYPER DEL    &mt LCTRL ESC   &mt LSHFT TAB
+                                                         &lhp NUM RET      &lspc NAV SPC    &mtb MEH BSPC
     >;
   };
 
