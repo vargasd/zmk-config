@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define QUICK_TAP_MS 200
 #define MEH RC(RS(RALT))
@@ -201,7 +202,7 @@ keymap {
       // ROW 1
       &trans
       &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &none             &bt BT_CLR_ALL
+      &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &ext_power EP_OFF &bt BT_CLR_ALL
       &trans
       // ROW 2
       &trans
