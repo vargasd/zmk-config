@@ -53,15 +53,13 @@ combos {
   down_arrow {
     key-positions = <19 40>;
     bindings = <&mo_kp NAV DOWN>;
-    timeout-ms = <100>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <175>;
     slow-release; // required for avoiding ⬇️ jjjj when holding space
   };
   up_arrow {
     key-positions = <20 40>;
     bindings = <&mo_kp NAV UP>;
-    timeout-ms = <100>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <175>;
     slow-release;
   };
 };
