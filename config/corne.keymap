@@ -28,11 +28,11 @@ combos {
   compatible = "zmk,combos";
   right_index_middle {
     key-positions = <19 20>;
-    bindings = <&kp LPAR>;
+    bindings = <&rhm RG(RALT) LPAR>;
   };
   right_middle_ring {
     key-positions = <20 21>;
-    bindings = <&kp RPAR>;
+    bindings = <&rhm RA(RCTRL) RPAR>;
   };
   right_index_up {
     key-positions = <7 19>;
