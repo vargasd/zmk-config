@@ -37,11 +37,11 @@ combos {
   compatible = "zmk,combos";
   right_index_middle {
     key-positions = <19 20>;
-    bindings = <&rhm RG(RALT) LPAR>;
+    bindings = <&lparmod LG(LALT) 0>;
   };
   right_middle_ring {
     key-positions = <20 21>;
-    bindings = <&rhm RA(RCTRL) RPAR>;
+    bindings = <&rparmod LA(LCTRL) 0>;
   };
   right_index_up {
     key-positions = <7 19>;
@@ -119,6 +119,28 @@ behaviors {
     require-prior-idle-ms = <150>;
     hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
   };
+  lparmod: left_paren_caret_hrm {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <250>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp>, <&lparangle>;
+    hold-trigger-on-release;
+    require-prior-idle-ms = <150>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+  };
+  rparmod: right_paren_caret_hrm {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <250>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp>, <&rparangle>;
+    hold-trigger-on-release;
+    require-prior-idle-ms = <150>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+  };
   lhp: layer_hold_preferred {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -152,6 +174,30 @@ behaviors {
     require-prior-idle-ms = <125>;
     bindings = <&mo>, <&kp>;
   };
+  scomma: comma_semicolon {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp COMMA>, <&kp SEMI>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  codot: dot_colon {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp DOT>, <&kp COLON>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  lparangle: left_paren_angle {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp LPAR>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  rparangle: right_paren_angle {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp RPAR>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 };
 
 keymap {
@@ -167,12 +213,12 @@ keymap {
       // ROW 2
       &trans
       &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
-      &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SEMI
+      &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
       &trans
       // ROW 3
       &trans
       &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
+      &kp N            &kp M            &scomma          &codot            &kp FSLH
       &trans
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
@@ -189,12 +235,12 @@ keymap {
       &trans
       // ROW 2
       &trans
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
       &kp STAR         &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &rhm RSHFT AMPS
       &trans
       // ROW 3
       &trans
-      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
+      &kp TILDE        &kp UNDER        &kp PLUS         &none             &kp PIPE
       &kp N0           &kp N1           &kp N2           &kp N3            &kp UNDER
       &trans
       // THUMBS
@@ -214,13 +260,13 @@ keymap {
       // ROW 2
       &trans
       // &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &none
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       &trans
       // ROW 3
       &trans
       // &none            &none            &none            &none             &none
-      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
+      &kp TILDE        &kp UNDER        &kp PLUS         &none             &kp PIPE
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp DQT
       &trans
       // THUMBS
