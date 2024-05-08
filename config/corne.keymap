@@ -184,12 +184,12 @@ keymap {
     bindings = <
       // ROW 1
       &trans
-      &kp BANG         &kp AT           &kp HASH         &kp BSLH          &kp PERCENT
+      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp N7           &kp N8           &kp N9            &kp PLUS
       &trans
       // ROW 2
       &trans
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp AMPS
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp STAR         &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &rhm RSHFT AMPS
       &trans
       // ROW 3
@@ -208,13 +208,13 @@ keymap {
       // ROW 1
       &trans
       // &none            &none            &none            &none             &none
-      &kp BANG         &kp AT           &kp HASH         &kp BSLH          &kp PERCENT
-      &kp CARET        &kp DOLLAR       &kp STAR         &kp MINUS         &kp UNDER
+      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
+      &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
       &trans
       // ROW 2
       &trans
       // &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &none
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp AMPS
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       &trans
       // ROW 3
