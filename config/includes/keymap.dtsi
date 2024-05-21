@@ -1,9 +1,3 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -16,14 +10,14 @@
 #define NAV 2
 #define FN 3
 #define LEFT_KEYS      \
-        1  2  3  4  5  \
-        13 14 15 16 17 \
-        25 26 27 28 29
+        0  1  2  3  4  \
+        10 11 12 13 14 \
+        20 21 22 23 24
 #define RIGHT_KEYS     \
-        6  7  8  9  10 \
-        18 19 20 21 22 \
-        30 31 32 33 34
-#define THUMB_KEYS 36 37 38 39 40 41
+        5  6  7  8  9  \
+        15 16 17 18 19 \
+        25 26 27 28 29
+#define THUMB_KEYS 30 31 32 33 34 35
 
 &mt {
   quick-tap-ms = <QUICK_TAP_MS>;
@@ -37,45 +31,40 @@
 combos {
   compatible = "zmk,combos";
   right_index_middle {
-    key-positions = <19 20>;
+    key-positions = <16 17>;
     bindings = <&rhm RG(RALT) LPAR>;
   };
   right_middle_ring {
-    key-positions = <20 21>;
+    key-positions = <17 18>;
     bindings = <&rhm RA(RCTRL) RPAR>;
   };
   right_index_up {
-    key-positions = <7 19>;
+    key-positions = <6 16>;
     bindings = <&kp LBKT>;
   };
   right_middle_up {
-    key-positions = <8 20>;
+    key-positions = <7 17>;
     bindings = <&kp RBKT>;
   };
   right_index_down {
-    key-positions = <19 31>;
+    key-positions = <16 26>;
     bindings = <&kp LBRC>;
   };
   right_middle_down {
-    key-positions = <20 32>;
+    key-positions = <17 27>;
     bindings = <&kp RBRC>;
   };
   down_arrow {
-    key-positions = <19 40>;
+    key-positions = <16 34>;
     bindings = <&mo_kp NAV DOWN>;
     require-prior-idle-ms = <175>;
     slow-release; // required for avoiding ⬇️ jjjj when holding space
   };
   up_arrow {
-    key-positions = <20 40>;
+    key-positions = <17 34>;
     bindings = <&mo_kp NAV UP>;
     require-prior-idle-ms = <175>;
     slow-release;
-  };
-  soft_off {
-    layers = <3>;
-    key-positions = <1 10 16 19>;
-    bindings = <&soft_off>;
   };
 };
 
@@ -175,20 +164,14 @@ keymap {
   QWERTY {
     bindings = <
       // ROW 1
-      &trans
       &kp Q            &kp W            &kp E            &kp R             &kp T
       &kp Y            &kp U            &kp I            &kp O             &kp P
-      &trans
       // ROW 2
-      &trans
       &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
       &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SEMI
-      &trans
       // ROW 3
-      &trans
       &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
-      &trans
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ctrl_spc_layer  &mtb MEH BSPC
@@ -198,20 +181,14 @@ keymap {
   NUM {
     bindings = <
       // ROW 1
-      &trans
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp N7           &kp N8           &kp N9            &kp PLUS
-      &trans
       // ROW 2
-      &trans
       &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp STAR         &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &rhm RSHFT AMPS
-      &trans
       // ROW 3
-      &trans
       &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
       &kp N0           &kp N1           &kp N2           &kp N3            &kp UNDER
-      &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
@@ -221,21 +198,14 @@ keymap {
   NAV {
     bindings = <
       // ROW 1
-      &trans
-      // &none            &none            &none            &none             &none
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
-      &trans
       // ROW 2
-      &trans
       &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
-      &trans
       // ROW 3
-      &trans
       &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp DQT
-      &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
@@ -245,20 +215,14 @@ keymap {
   FN {
     bindings = <
       // ROW 1
-      &trans
       &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
       &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &ext_power EP_OFF &bt BT_CLR_ALL
-      &trans
       // ROW 2
-      &trans
       &lhm LSHFT F6    &lhm LCTRL F7    &lhm LALT F8     &lhm LGUI F9      &kp F10
       &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &kp RCTRL         &kp RSHFT
-      &trans
       // ROW 3
-      &trans
       &kp F11          &kp F12          &kp F13          &kp F14           &kp F15
       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4
-      &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
