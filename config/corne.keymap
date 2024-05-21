@@ -14,6 +14,7 @@
 #define HYPER LC(LS(LA(LGUI)))
 #define NUM 1
 #define NAV 2
+#define FN 3
 #define LEFT_KEYS      \
         1  2  3  4  5  \
         13 14 15 16 17 \
@@ -160,6 +161,14 @@ behaviors {
   };
 };
 
+conditional_layers {
+  compatible = "zmk,conditional-layers";
+  tri_layer {
+    if-layers = <NUM NAV>;
+    then-layer = <FN>;
+  };
+};
+
 keymap {
   compatible = "zmk,keymap";
 
@@ -219,18 +228,16 @@ keymap {
       &trans
       // ROW 2
       &trans
-      // &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &none
       &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       &trans
       // ROW 3
       &trans
-      // &none            &none            &none            &none             &none
       &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp DQT
       &trans
       // THUMBS
-      &trans           &trans           &lt 3 LC(SPC)
+      &trans           &trans           &trans
                                                          &trans            &trans           &trans
     >;
   };
