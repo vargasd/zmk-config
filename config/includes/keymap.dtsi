@@ -142,12 +142,6 @@ behaviors {
     require-prior-idle-ms = <125>;
     bindings = <&mo>, <&kp>;
   };
-  ctrl_spc_layer: backspace_delete {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&lspc NAV SPC>, <&kp LC(SPC)>;
-    mods = <(MOD_LSFT)>;
-  };
 };
 
 conditional_layers {
@@ -174,7 +168,7 @@ keymap {
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &ctrl_spc_layer  &mtb MEH BSPC
+                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
     >;
   };
 
