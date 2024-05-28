@@ -66,6 +66,11 @@ combos {
     require-prior-idle-ms = <150>;
     slow-release;
   };
+  ctrl_space {
+    key-positions = <32 33>;
+    timeout-ms = <75>;
+    bindings = <&mt RC(LSHFT) RC(SPC)>;
+  };
 };
 
 macros {
