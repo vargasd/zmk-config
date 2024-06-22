@@ -172,7 +172,7 @@ keymap {
       &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
       // THUMBS
-      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
+      &mtb HYPER DEL    &lhp NUM ESC    &mtb LSHFT TAB
                                                          &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
     >;
   };
