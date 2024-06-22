@@ -32,11 +32,11 @@ combos {
   compatible = "zmk,combos";
   right_index_middle {
     key-positions = <16 17>;
-    bindings = <&rhm RG(RALT) LPAR>;
+    bindings = <&lparmod LG(LALT) 0>;
   };
   right_middle_ring {
     key-positions = <17 18>;
-    bindings = <&rhm RA(RCTRL) RPAR>;
+    bindings = <&rparmod LA(LCTRL) 0>;
   };
   right_index_up {
     key-positions = <6 16>;
@@ -138,6 +138,28 @@ behaviors {
     quick-tap-ms = <130>;
     bindings = <&kp>, <&kp>;
   };
+  lparmod: left_paren_caret_hrm {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <250>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp>, <&lparangle>;
+    hold-trigger-on-release;
+    require-prior-idle-ms = <150>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+  };
+  rparmod: right_paren_caret_hrm {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <250>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&kp>, <&rparangle>;
+    hold-trigger-on-release;
+    require-prior-idle-ms = <150>;
+    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
+  };
   lspc: layer_space {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -146,6 +168,18 @@ behaviors {
     quick-tap-ms = <150>;
     require-prior-idle-ms = <120>;
     bindings = <&mo>, <&kp>;
+  };
+  lparangle: left_paren_angle {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp LPAR>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  rparangle: right_paren_angle {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp RPAR>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
   };
 };
 
