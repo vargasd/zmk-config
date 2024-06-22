@@ -164,9 +164,9 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <125>;
+    tapping-term-ms = <130>;
     quick-tap-ms = <150>;
-    require-prior-idle-ms = <120>;
+    require-prior-idle-ms = <125>;
     bindings = <&mo>, <&kp>;
   };
   lparangle: left_paren_angle {
