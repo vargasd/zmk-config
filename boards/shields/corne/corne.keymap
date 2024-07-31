@@ -1,8 +1,0 @@
-#include "../includes/keymap.dtsi"
-#include <dt-bindings/zmk/matrix_transform.h>
-
-/ {
-  chosen {
-    zmk,matrix_transform = &five_column_transform;
-  };
-};
