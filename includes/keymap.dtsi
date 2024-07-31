@@ -6,9 +6,11 @@
 #define QUICK_TAP_MS 200
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
-#define NUM 1
-#define NAV 2
-#define FN 3
+#define QWERTY 0
+#define COLEMAK_DH 1
+#define NUM 2
+#define NAV 3
+#define FN 4
 #define LEFT_KEYS      \
         0  1  2  3  4  \
         10 11 12 13 14 \
@@ -70,6 +72,10 @@ combos {
     key-positions = <32 33>;
     timeout-ms = <75>;
     bindings = <&mt RC(LSHFT) RC(SPC)>;
+  };
+  tog_colemak {
+    key-positions = <0 1>;
+    bindings = <&tog COLEMAK_DH>;
   };
 };
 
@@ -181,6 +187,18 @@ behaviors {
     bindings = <&kp RPAR>, <&kp GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  scomma: comma_semicolon {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp COMMA>, <&kp SEMI>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  codot: dot_colon {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp DOT>, <&kp COLON>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 };
 
 conditional_layers {
@@ -205,6 +223,23 @@ keymap {
       // ROW 3
       &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
+      // THUMBS
+      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
+    >;
+  };
+
+  COLEMAK_DH {
+    bindings = <
+      // ROW 1
+      &kp Q            &kp W            &kp F            &kp P             &kp B
+      &kp J            &kp L            &kp U            &kp Y             &kp SQT
+      // ROW 2
+      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &kp G
+      &kp M            &rhm RGUI N      &rhm RALT E      &rhm RCTRL I      &rhm RSHFT O
+      // ROW 3
+      &kp Z            &kp X            &kp C            &kp D             &kp V
+      &kp K            &kp H            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
