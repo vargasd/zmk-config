@@ -7,7 +7,7 @@
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
 #define QWERTY 0
-#define COLEMAK_DH 1
+#define TARMAK 1
 #define NUM 2
 #define NAV 3
 #define FN 4
@@ -75,7 +75,7 @@ combos {
   };
   tog_colemak {
     key-positions = <0 1>;
-    bindings = <&tog COLEMAK_DH>;
+    bindings = <&tog TARMAK>;
   };
 };
 
@@ -229,17 +229,17 @@ keymap {
     >;
   };
 
-  COLEMAK_DH {
+  TARMAK {
     bindings = <
       // ROW 1
-      &kp Q            &kp W            &kp F            &kp P             &kp B
-      &kp J            &kp L            &kp U            &kp Y             &kp SQT
+      &kp Q            &kp W            &kp J            &kp R             &kp T
+      &kp Y            &kp U            &kp I            &kp O             &kp P
       // ROW 2
-      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &kp G
-      &kp M            &rhm RGUI N      &rhm RALT E      &rhm RCTRL I      &rhm RSHFT O
+      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
+      &kp H            &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
       // ROW 3
-      &kp Z            &kp X            &kp C            &kp D             &kp V
-      &kp K            &kp H            &scomma          &codot            &kp FSLH
+      &kp Z            &kp X            &kp C            &kp V             &kp B
+      &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
