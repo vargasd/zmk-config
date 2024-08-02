@@ -219,10 +219,10 @@ keymap {
       &kp Y            &kp U            &kp I            &kp O             &kp P
       // ROW 2
       &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
-      &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SEMI
+      &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
       // ROW 3
       &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &kp COMMA        &kp DOT           &kp FSLH
+      &kp N            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
@@ -252,10 +252,10 @@ keymap {
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp N7           &kp N8           &kp N9            &kp PLUS
       // ROW 2
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
       &kp STAR         &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &rhm RSHFT AMPS
       // ROW 3
-      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
+      &kp TILDE        &kp UNDER        &kp PLUS         &none             &kp PIPE
       &kp N0           &kp N1           &kp N2           &kp N3            &kp UNDER
       // THUMBS
       &trans           &trans           &trans
@@ -269,10 +269,10 @@ keymap {
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
       // ROW 2
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI SQT     &kp BSLH
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       // ROW 3
-      &kp TILDE        &kp UNDER        &kp PLUS         &kp DQT           &kp PIPE
+      &kp TILDE        &kp UNDER        &kp PLUS         &trans            &kp PIPE
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp DQT
       // THUMBS
       &trans           &trans           &trans
