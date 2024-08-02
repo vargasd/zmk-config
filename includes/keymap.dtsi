@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define QUICK_TAP_MS 200
+#define HRM_TAP_MS 225
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
 #define QWERTY 0
@@ -102,22 +103,22 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <HRM_TAP_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
     hold-trigger-on-release;
-    require-prior-idle-ms = <125>;
+    require-prior-idle-ms = <120>;
     hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
   };
   rhm: right_home_row_mod {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <HRM_TAP_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
     hold-trigger-on-release;
-    require-prior-idle-ms = <125>;
+    require-prior-idle-ms = <120>;
     hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
   };
   lhp: layer_hold_preferred {
@@ -148,7 +149,7 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <HRM_TAP_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&lparangle>;
     hold-trigger-on-release;
@@ -159,7 +160,7 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <250>;
+    tapping-term-ms = <HRM_TAP_MS>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&rparangle>;
     hold-trigger-on-release;
