@@ -33,14 +33,6 @@
 / {
 combos {
   compatible = "zmk,combos";
-  right_index_middle {
-    key-positions = <16 17>;
-    bindings = <&lparmod LG(LALT) 0>;
-  };
-  right_middle_ring {
-    key-positions = <17 18>;
-    bindings = <&rparmod LA(LCTRL) 0>;
-  };
   right_index_up {
     key-positions = <6 16>;
     bindings = <&kp LBKT>;
@@ -141,28 +133,6 @@ behaviors {
     quick-tap-ms = <130>;
     bindings = <&kp>, <&kp>;
   };
-  lparmod: left_paren_caret_hrm {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <HRM_TAP_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp>, <&lparangle>;
-    hold-trigger-on-release;
-    require-prior-idle-ms = <150>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
-  };
-  rparmod: right_paren_caret_hrm {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <HRM_TAP_MS>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp>, <&rparangle>;
-    hold-trigger-on-release;
-    require-prior-idle-ms = <150>;
-    hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
-  };
   lspc: layer_space {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -221,8 +191,10 @@ keymap {
       &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
-      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
+      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &lspc NAV SPC    &lt SYM BSPC
+    >;
+  };
 
   SYM {
     bindings = <
@@ -244,14 +216,14 @@ keymap {
   NUM {
     bindings = <
       // ROW 1
-      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
-      &kp CARET        &kp N7           &kp N8           &kp N9            &kp PLUS
+      &trans           &trans           &trans           &trans            &trans
+      &trans           &kp N7           &kp N8           &kp N9            &trans
       // ROW 2
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
-      &kp STAR         &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &rhm RSHFT AMPS
+      &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &trans
+      &trans           &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &kp RSHFT
       // ROW 3
-      &kp TILDE        &kp UNDER        &kp PLUS         &none             &kp PIPE
-      &kp N0           &kp N1           &kp N2           &kp N3            &kp UNDER
+      &trans           &trans           &trans           &trans            &trans
+      &kp N0           &kp N1           &kp N2           &kp N3            &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
@@ -261,14 +233,14 @@ keymap {
   NAV {
     bindings = <
       // ROW 1
-      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
+      &trans           &trans           &trans           &trans            &trans
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
       // ROW 2
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
+      &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &trans
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       // ROW 3
-      &kp TILDE        &kp UNDER        &kp PLUS         &trans            &kp PIPE
-      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp DQT
+      &trans           &trans           &trans           &trans            &trans
+      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
