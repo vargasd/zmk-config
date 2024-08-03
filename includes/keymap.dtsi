@@ -133,15 +133,6 @@ behaviors {
     quick-tap-ms = <130>;
     bindings = <&kp>, <&kp>;
   };
-  lspc: layer_space {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <130>;
-    quick-tap-ms = <150>;
-    require-prior-idle-ms = <125>;
-    bindings = <&mo>, <&kp>;
-  };
   lparangle: left_paren_angle {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
@@ -192,7 +183,7 @@ keymap {
       &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lspc NAV SPC    &lt SYM BSPC
+                                                         &mqt RCTRL RET    &lt NAV SPC      &lt SYM BSPC
     >;
   };
 
