@@ -7,8 +7,8 @@
 #define HRM_TAP_MS 225
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
-#define QWERTY 0
-#define TARMAK 1
+#define BASE 0
+#define SYM 1
 #define NUM 2
 #define NAV 3
 #define FN 4
@@ -73,10 +73,6 @@ combos {
     key-positions = <32 33>;
     timeout-ms = <75>;
     bindings = <&mt RC(LSHFT) RC(SPC)>;
-  };
-  tog_colemak {
-    key-positions = <0 1>;
-    bindings = <&tog TARMAK>;
   };
 };
 
@@ -213,24 +209,7 @@ conditional_layers {
 keymap {
   compatible = "zmk,keymap";
 
-  QWERTY {
-    bindings = <
-      // ROW 1
-      &kp Q            &kp W            &kp E            &kp R             &kp T
-      &kp Y            &kp U            &kp I            &kp O             &kp P
-      // ROW 2
-      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
-      &kp H            &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
-      // ROW 3
-      &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &scomma          &codot            &kp FSLH
-      // THUMBS
-      &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
-    >;
-  };
-
-  TARMAK {
+  BASE {
     bindings = <
       // ROW 1
       &kp Q            &kp W            &kp J            &kp R             &kp T
@@ -244,6 +223,21 @@ keymap {
       // THUMBS
       &mtb HYPER DEL    &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &lspc NAV SPC    &mtb MEH BSPC
+
+  SYM {
+    bindings = <
+      // ROW 1
+      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
+      &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
+      // ROW 2
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
+      &kp LT           &rhm RGUI LPAR   &rhm RALT LBKT   &rhm RCTRL LBRC   &rhm RSHFT SQT
+      // ROW 3
+      &kp TILDE        &kp UNDER        &kp PLUS         &trans            &kp PIPE
+      &kp GT           &kp RPAR         &kp RBKT         &kp RBRC          &kp DQT
+      // THUMBS
+      &trans           &trans           &trans
+                                                         &trans            &trans           &trans
     >;
   };
 
