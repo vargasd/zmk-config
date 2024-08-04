@@ -49,6 +49,12 @@ combos {
     key-positions = <17 27>;
     bindings = <&kp RBRC>;
   };
+  left_arrow {
+    key-positions = <15 34>;
+    bindings = <&mo_kp NAV LEFT>;
+    require-prior-idle-ms = <150>;
+    slow-release;
+  };
   down_arrow {
     key-positions = <16 34>;
     bindings = <&mo_kp NAV DOWN>;
@@ -58,6 +64,12 @@ combos {
   up_arrow {
     key-positions = <17 34>;
     bindings = <&mo_kp NAV UP>;
+    require-prior-idle-ms = <150>;
+    slow-release;
+  };
+  right_arrow {
+    key-positions = <18 34>;
+    bindings = <&mo_kp NAV RIGHT>;
     require-prior-idle-ms = <150>;
     slow-release;
   };
@@ -125,6 +137,14 @@ behaviors {
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&kp>, <&kp>;
   };
+  ltb: layer_tap_balanced {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&kp>;
+  };
   mqt: mod_quicker_tap {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -183,7 +203,7 @@ keymap {
       &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lt NAV SPC      &lt SYM BSPC
+                                                         &mqt RCTRL RET    &lt NAV SPC      &ltb SYM BSPC
     >;
   };
 
@@ -210,7 +230,7 @@ keymap {
       &trans           &trans           &trans           &trans            &trans
       &trans           &kp N7           &kp N8           &kp N9            &trans
       // ROW 2
-      &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &trans
+      &trans           &trans           &trans           &trans            &trans
       &trans           &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &kp RSHFT
       // ROW 3
       &trans           &trans           &trans           &trans            &trans
@@ -227,7 +247,7 @@ keymap {
       &trans           &trans           &trans           &trans            &trans
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
       // ROW 2
-      &kp LSHFT        &kp LCTRL        &kp LALT         &kp LGUI          &trans
+      &trans           &trans           &trans           &trans            &trans
       &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       // ROW 3
       &trans           &trans           &trans           &trans            &trans
