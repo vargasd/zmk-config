@@ -32,21 +32,37 @@
 / {
 combos {
   compatible = "zmk,combos";
+  right_stretch_up {
+    key-positions = <5 15>;
+    bindings = <&kp LPAR>;
+  };
+  right_stretch_down {
+    key-positions = <15 25>;
+    bindings = <&kp RPAR>;
+  };
   right_index_up {
     key-positions = <6 16>;
     bindings = <&kp LBKT>;
-  };
-  right_middle_up {
-    key-positions = <7 17>;
-    bindings = <&kp RBKT>;
   };
   right_index_down {
     key-positions = <16 26>;
     bindings = <&kp LBRC>;
   };
+  right_middle_up {
+    key-positions = <7 17>;
+    bindings = <&kp RBKT>;
+  };
   right_middle_down {
     key-positions = <17 27>;
     bindings = <&kp RBRC>;
+  };
+  right_ring_up {
+    key-positions = <8 18>;
+    bindings = <&kp LT>;
+  };
+  right_ring_down {
+    key-positions = <18 28>;
+    bindings = <&kp GT>;
   };
   left_arrow {
     key-positions = <15 34>;
