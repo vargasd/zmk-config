@@ -203,7 +203,7 @@ keymap {
       &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &lt NAV SPC      &ltb SYM BSPC
+                                                         &mqt RCTRL RET    &ltb NAV SPC     &ltb SYM BSPC
     >;
   };
 
