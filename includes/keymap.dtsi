@@ -196,8 +196,8 @@ keymap {
       &kp Q            &kp W            &kp J            &kp R             &kp T
       &kp Y            &kp U            &kp I            &kp O             &kp P
       // ROW 2
-      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &kp G
-      &kp H            &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
+      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
+      &rhm MEH H       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
       // ROW 3
       &kp Z            &kp X            &kp C            &kp V             &kp B
       &kp K            &kp M            &scomma          &codot            &kp FSLH
@@ -213,10 +213,10 @@ keymap {
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
       // ROW 2
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &kp LGUI          &kp BSLH
-      &kp LT           &rhm RGUI LPAR   &rhm RALT LBKT   &rhm RCTRL LBRC   &rhm RSHFT SQT
+      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI LPAR    &lhm MEH BSLH
+      &rhm MEH LT      &rhm RGUI LPAR   &rhm RALT LBKT   &rhm RCTRL LBRC   &rhm RSHFT SQT
       // ROW 3
-      &kp TILDE        &kp UNDER        &kp PLUS         &trans            &kp PIPE
+      &kp TILDE        &kp UNDER        &kp PLUS         &kp RPAR          &kp PIPE
       &kp GT           &kp RPAR         &kp RBKT         &kp RBRC          &kp DQT
       // THUMBS
       &trans           &trans           &trans
