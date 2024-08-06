@@ -8,10 +8,9 @@
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
 #define BASE 0
-#define SYM 1
+#define NAV 1
 #define NUM 2
-#define NAV 3
-#define FN 4
+#define FN 3
 #define LEFT_KEYS      \
         0  1  2  3  4  \
         10 11 12 13 14 \
@@ -141,8 +140,9 @@ behaviors {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
+    tapping-term-ms = <130>;
+    quick-tap-ms = <175>;
+    require-prior-idle-ms = <120>;
     bindings = <&mo>, <&kp>;
   };
   mqt: mod_quicker_tap {
@@ -203,21 +203,21 @@ keymap {
       &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &ltb NAV SPC     &ltb SYM BSPC
+                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
     >;
   };
 
-  SYM {
+  NAV {
     bindings = <
       // ROW 1
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
       // ROW 2
       &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI LPAR    &lhm MEH BSLH
-      &rhm MEH LT      &rhm RGUI LPAR   &rhm RALT LBKT   &rhm RCTRL LBRC   &rhm RSHFT SQT
+      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
       // ROW 3
       &kp TILDE        &kp UNDER        &kp PLUS         &kp RPAR          &kp PIPE
-      &kp GT           &kp RPAR         &kp RBKT         &kp RBRC          &kp DQT
+      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
@@ -235,23 +235,6 @@ keymap {
       // ROW 3
       &trans           &trans           &trans           &trans            &trans
       &kp N0           &kp N1           &kp N2           &kp N3            &trans
-      // THUMBS
-      &trans           &trans           &trans
-                                                         &trans            &trans           &trans
-    >;
-  };
-
-  NAV {
-    bindings = <
-      // ROW 1
-      &trans           &trans           &trans           &trans            &trans
-      &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
-      // ROW 2
-      &trans           &trans           &trans           &trans            &trans
-      &kp LEFT         &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
-      // ROW 3
-      &trans           &trans           &trans           &trans            &trans
-      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
