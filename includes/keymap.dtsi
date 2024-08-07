@@ -8,9 +8,10 @@
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
 #define BASE 0
-#define NAV 1
-#define NUM 2
-#define FN 3
+#define ALT 1
+#define NAV 2
+#define NUM 3
+#define FN 4
 #define LEFT_KEYS      \
         0  1  2  3  4  \
         10 11 12 13 14 \
@@ -92,6 +93,10 @@ combos {
     key-positions = <32 33>;
     timeout-ms = <75>;
     bindings = <&mt RC(LSHFT) RC(SPC)>;
+  };
+  tog_alt {
+    key-positions = <0 1>;
+    bindings = <&tog ALT>;
   };
 };
 
@@ -206,13 +211,30 @@ conditional_layers {
 keymap {
   compatible = "zmk,keymap";
 
-  BASE {
+  BASE { // TARMAK 1
     bindings = <
       // ROW 1
       &kp Q            &kp W            &kp J            &kp R             &kp T
       &kp Y            &kp U            &kp I            &kp O             &kp P
       // ROW 2
       &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
+      &rhm MEH H       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
+      // ROW 3
+      &kp Z            &kp X            &kp C            &kp V             &kp B
+      &kp K            &kp M            &scomma          &codot            &kp FSLH
+      // THUMBS
+      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+    >;
+  };
+
+  ALT { // TARMAK 2
+    bindings = <
+      // ROW 1
+      &kp Q            &kp W            &kp F            &kp R             &kp G
+      &kp Y            &kp U            &kp I            &kp O             &kp P
+      // ROW 2
+      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI T       &lhm MEH J
       &rhm MEH H       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
       // ROW 3
       &kp Z            &kp X            &kp C            &kp V             &kp B
