@@ -33,37 +33,21 @@
 / {
 combos {
   compatible = "zmk,combos";
-  right_stretch_up {
-    key-positions = <5 15>;
-    bindings = <&kp LPAR>;
-  };
-  right_stretch_down {
-    key-positions = <15 25>;
-    bindings = <&kp RPAR>;
-  };
   right_index_up {
     key-positions = <6 16>;
-    bindings = <&kp LBKT>;
+    bindings = <&ht LBRC LBKT>;
   };
   right_index_down {
     key-positions = <16 26>;
-    bindings = <&kp LBRC>;
+    bindings = <&ht LT LPAR>;
   };
   right_middle_up {
     key-positions = <7 17>;
-    bindings = <&kp RBKT>;
+    bindings = <&ht RBRC RBKT>;
   };
   right_middle_down {
     key-positions = <17 27>;
-    bindings = <&kp RBRC>;
-  };
-  right_ring_up {
-    key-positions = <8 18>;
-    bindings = <&kp LT>;
-  };
-  right_ring_down {
-    key-positions = <18 28>;
-    bindings = <&kp GT>;
+    bindings = <&ht GT RPAR>;
   };
   left_arrow {
     key-positions = <15 34>;
@@ -141,6 +125,14 @@ behaviors {
     require-prior-idle-ms = <120>;
     hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>;
   };
+  ht: hold_tap {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <135>;
+    quick_tap_ms = <0>;
+    bindings = <&kp>, <&kp>;
+  };
   lhp: layer_hold_preferred {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -173,18 +165,6 @@ behaviors {
     tapping-term-ms = <200>;
     quick-tap-ms = <130>;
     bindings = <&kp>, <&kp>;
-  };
-  lparangle: left_paren_angle {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp LPAR>, <&kp LT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  rparangle: right_paren_angle {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp RPAR>, <&kp GT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
   };
   scomma: comma_semicolon {
     compatible = "zmk,behavior-mod-morph";
