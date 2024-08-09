@@ -191,7 +191,8 @@ conditional_layers {
 keymap {
   compatible = "zmk,keymap";
 
-  BASE { // TARMAK 1
+  BASE { 
+    // TARMAK 1
     bindings = <
       // ROW 1
       &kp Q            &kp W            &kp J            &kp R             &kp T
@@ -208,16 +209,17 @@ keymap {
     >;
   };
 
-  ALT { // TARMAK 2
+  ALT { 
+    // TARMAK-DH 2 (still no hm)
     bindings = <
       // ROW 1
-      &kp Q            &kp W            &kp F            &kp R             &kp G
+      &kp Q            &kp W            &kp F            &kp R             &kp B
       &kp Y            &kp U            &kp I            &kp O             &kp P
       // ROW 2
-      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI T       &lhm MEH J
+      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI T       &lhm MEH G
       &rhm MEH H       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
       // ROW 3
-      &kp Z            &kp X            &kp C            &kp V             &kp B
+      &kp Z            &kp X            &kp C            &kp J             &kp V
       &kp K            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
