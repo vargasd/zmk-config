@@ -178,6 +178,18 @@ behaviors {
     bindings = <&kp DOT>, <&kp COLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
   };
+  minplus: minus_plus {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp MINUS>, <&kp PLUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
+  underqual: underscore_equal {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp UNDER>, <&kp EQUAL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
 };
 
 conditional_layers {
@@ -206,7 +218,8 @@ keymap {
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
-      &kp LSHFT &kp RSHFT
+      // PINKIES
+      &kp MINUS                                                                             &kp UNDER
     >;
   };
 
@@ -225,6 +238,8 @@ keymap {
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+      // PINKIES
+      &minplus                                                                              &underqual
     >;
   };
 
@@ -242,6 +257,8 @@ keymap {
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
+      // PINKIES
+      &trans                                                                                &trans
     >;
   };
 
@@ -259,6 +276,8 @@ keymap {
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
+      // PINKIES
+      &trans                                                                                &trans
     >;
   };
 
@@ -276,6 +295,8 @@ keymap {
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
+      // PINKIES
+      &trans                                                                                &trans
     >;
   };
 };
