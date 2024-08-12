@@ -204,26 +204,6 @@ keymap {
   compatible = "zmk,keymap";
 
   BASE { 
-    // TARMAK-DH 2 (no hm)
-    bindings = <
-      // ROW 1
-      &kp Q            &kp W            &kp F            &kp R             &kp B
-      &kp Y            &kp U            &kp I            &kp O             &kp P
-      // ROW 2
-      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI T       &lhm MEH G
-      &rhm MEH H       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
-      // ROW 3
-      &kp Z            &kp X            &kp C            &kp J             &kp V
-      &kp K            &kp M            &scomma          &codot            &kp FSLH
-      // THUMBS
-      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
-      // PINKIES
-      &minplus                                                                              &underqual
-    >;
-  };
-
-  ALT { 
     // TARMAK-DH 2
     bindings = <
       // ROW 1
@@ -234,6 +214,26 @@ keymap {
       &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
       // ROW 3
       &kp Z            &kp X            &kp C            &kp J             &kp V
+      &kp K            &kp H            &scomma          &codot            &kp FSLH
+      // THUMBS
+      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+      // PINKIES
+      &minplus                                                                              &underqual
+    >;
+  };
+
+  ALT { 
+    // TARMAK-DH 3
+    bindings = <
+      // ROW 1
+      &kp Q            &kp W            &kp F            &kp J             &kp B
+      &kp Y            &kp U            &kp I            &kp O             &kp P
+      // ROW 2
+      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &lhm MEH G
+      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
+      // ROW 3
+      &kp Z            &kp X            &kp C            &kp D             &kp V
       &kp K            &kp H            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
