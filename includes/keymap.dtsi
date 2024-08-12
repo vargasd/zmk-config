@@ -206,6 +206,7 @@ keymap {
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+      &kp LSHFT &kp RSHFT
     >;
   };
 
