@@ -219,7 +219,7 @@ keymap {
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
       // PINKIES
-      &kp MINUS                                                                             &kp UNDER
+      &minplus                                                                              &underqual
     >;
   };
 
