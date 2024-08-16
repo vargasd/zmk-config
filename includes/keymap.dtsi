@@ -204,26 +204,6 @@ keymap {
   compatible = "zmk,keymap";
 
   BASE { 
-    // TARMAK-DH 3
-    bindings = <
-      // ROW 1
-      &kp Q            &kp W            &kp F            &kp J             &kp B
-      &kp Y            &kp U            &kp I            &kp O             &kp P
-      // ROW 2
-      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &lhm MEH G
-      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT SQT
-      // ROW 3
-      &kp Z            &kp X            &kp C            &kp D             &kp V
-      &kp K            &kp H            &scomma          &codot            &kp FSLH
-      // THUMBS
-      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
-      // PINKIES
-      &underqual                                                                            &minplus
-    >; 
-  };
-
-  ALT { 
     // TARMAK-DH 4
     bindings = <
       // ROW 1
@@ -240,6 +220,26 @@ keymap {
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
       // PINKIES
       &underqual                                                                            &minplus
+    >;  
+  };
+
+  ALT { 
+    // COLEMAK-DH
+    bindings = <
+      // ROW 1
+      &kp Q            &kp W            &kp F            &kp P             &kp B
+      &kp J            &kp L            &kp U            &kp Y             &kp SQT
+      // ROW 2
+      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &lhm MEH G
+      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL I      &rhm RSHFT O
+      // ROW 3
+      &kp Z            &kp X            &kp C            &kp D             &kp V
+      &kp K            &kp H            &scomma          &codot            &kp FSLH
+      // THUMBS
+      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+      // PINKIES
+      &underqual                                                                            &minplus
     >;
   };
 
@@ -247,7 +247,7 @@ keymap {
     bindings = <
       // ROW 1
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
-      &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp UNDER
+      &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp GRAVE
       // ROW 2
       &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI LPAR    &lhm MEH BSLH
       &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
@@ -266,7 +266,7 @@ keymap {
     bindings = <
       // ROW 1
       &trans           &trans           &trans           &trans            &trans
-      &trans           &kp N7           &kp N8           &kp N9            &trans
+      &trans           &kp N7           &kp N8           &kp N9            &kp GRAVE
       // ROW 2
       &trans           &trans           &trans           &trans            &trans
       &trans           &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &kp RSHFT
