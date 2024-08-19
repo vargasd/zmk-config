@@ -79,7 +79,7 @@ combos {
     bindings = <&mt RC(LSHFT) RC(SPC)>;
   };
   tog_alt {
-    key-positions = <0 1>;
+    key-positions = <0 9>;
     bindings = <&tog ALT>;
   };
 };
@@ -204,26 +204,6 @@ keymap {
   compatible = "zmk,keymap";
 
   BASE { 
-    // TARMAK-DH 4
-    bindings = <
-      // ROW 1
-      &kp Q            &kp W            &kp F            &kp P             &kp B
-      &kp J            &kp U            &kp I            &kp Y             &kp SQT
-      // ROW 2
-      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &lhm MEH G
-      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL L      &rhm RSHFT O
-      // ROW 3
-      &kp Z            &kp X            &kp C            &kp D             &kp V
-      &kp K            &kp H            &scomma          &codot            &kp FSLH
-      // THUMBS
-      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
-      // PINKIES
-      &underqual                                                                            &minplus
-    >;  
-  };
-
-  ALT { 
     // COLEMAK-DH
     bindings = <
       // ROW 1
@@ -235,6 +215,26 @@ keymap {
       // ROW 3
       &kp Z            &kp X            &kp C            &kp D             &kp V
       &kp K            &kp H            &scomma          &codot            &kp FSLH
+      // THUMBS
+      &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
+                                                         &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+      // PINKIES
+      &underqual                                                                            &minplus
+    >;
+  };
+
+  ALT { 
+    // QWERTY
+    bindings = <
+      // ROW 1
+      &kp Q            &kp W            &kp E            &kp R             &kp T
+      &kp Y            &kp I            &kp O            &kp U             &kp P
+      // ROW 2
+      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
+      &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
+      // ROW 3
+      &kp Z            &kp X            &kp C            &kp V             &kp B
+      &kp N            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
