@@ -224,17 +224,17 @@ keymap {
   };
 
   ALT { 
-    // QWERTY
+    // COLEMAK-DH to Graphite #1
     bindings = <
       // ROW 1
-      &kp Q            &kp W            &kp E            &kp R             &kp T
-      &kp Y            &kp I            &kp O            &kp U             &kp P
+      &kp B            &kp W            &kp F            &kp P             &kp Z
+      &kp SQT          &kp L            &kp U            &kp Y             &kp J
       // ROW 2
-      &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
-      &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
+      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT T      &lhm LGUI S       &lhm MEH G
+      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL I      &rhm RSHFT O
       // ROW 3
-      &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &scomma          &codot            &kp FSLH
+      &kp Q            &kp X            &kp C            &kp D             &kp V
+      &kp K            &kp H            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
@@ -242,6 +242,25 @@ keymap {
       &underqual                                                                            &minplus
     >;
   };
+  // ALT { 
+  //   // QWERTY
+  //   bindings = <
+  //     // ROW 1
+  //     &kp Q            &kp W            &kp E            &kp R             &kp T
+  //     &kp Y            &kp I            &kp O            &kp U             &kp P
+  //     // ROW 2
+  //     &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
+  //     &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
+  //     // ROW 3
+  //     &kp Z            &kp X            &kp C            &kp V             &kp B
+  //     &kp N            &kp M            &scomma          &codot            &kp FSLH
+  //     // THUMBS
+  //     &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
+  //                                                        &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
+  //     // PINKIES
+  //     &underqual                                                                            &minplus
+  //   >;
+  // };
 
   NAV {
     bindings = <
