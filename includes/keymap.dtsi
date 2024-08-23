@@ -203,15 +203,15 @@ conditional_layers {
 keymap {
   compatible = "zmk,keymap";
 
-  BASE { 
+  BASE {
     // COLEMAK-DH
     bindings = <
       // ROW 1
       &kp Q            &kp W            &kp F            &kp P             &kp B
       &kp J            &kp L            &kp U            &kp Y             &kp SQT
       // ROW 2
-      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT S      &lhm LGUI T       &lhm MEH G
-      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL I      &rhm RSHFT O
+      &lhm LCTRL A     &lhm LSHFT R     &lhm LALT S      &lhm LGUI T       &lhm MEH G
+      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RSHFT I      &rhm RCTRL O
       // ROW 3
       &kp Z            &kp X            &kp C            &kp D             &kp V
       &kp K            &kp H            &scomma          &codot            &kp FSLH
@@ -223,18 +223,18 @@ keymap {
     >;
   };
 
-  ALT { 
-    // COLEMAK-DH to Graphite #1
+  ALT {
+    // QWERTY
     bindings = <
       // ROW 1
-      &kp B            &kp W            &kp F            &kp P             &kp Z
-      &kp SQT          &kp L            &kp U            &kp Y             &kp J
+      &kp Q            &kp W            &kp E            &kp R             &kp T
+      &kp Y            &kp I            &kp O            &kp U             &kp P
       // ROW 2
-      &lhm LSHFT A     &lhm LCTRL R     &lhm LALT T      &lhm LGUI S       &lhm MEH G
-      &rhm MEH M       &rhm RGUI N      &rhm RALT E      &rhm RCTRL I      &rhm RSHFT O
+      &lhm LCTRL A     &lhm LSHFT S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
+      &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RSHFT L      &rhm RCTRL SQT
       // ROW 3
-      &kp Q            &kp X            &kp C            &kp D             &kp V
-      &kp K            &kp H            &scomma          &codot            &kp FSLH
+      &kp Z            &kp X            &kp C            &kp V             &kp B
+      &kp N            &kp M            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
@@ -242,25 +242,6 @@ keymap {
       &underqual                                                                            &minplus
     >;
   };
-  // ALT { 
-  //   // QWERTY
-  //   bindings = <
-  //     // ROW 1
-  //     &kp Q            &kp W            &kp E            &kp R             &kp T
-  //     &kp Y            &kp I            &kp O            &kp U             &kp P
-  //     // ROW 2
-  //     &lhm LSHFT A     &lhm LCTRL S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
-  //     &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RCTRL L      &rhm RSHFT SQT
-  //     // ROW 3
-  //     &kp Z            &kp X            &kp C            &kp V             &kp B
-  //     &kp N            &kp M            &scomma          &codot            &kp FSLH
-  //     // THUMBS
-  //     &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
-  //                                                        &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
-  //     // PINKIES
-  //     &underqual                                                                            &minplus
-  //   >;
-  // };
 
   NAV {
     bindings = <
@@ -268,8 +249,8 @@ keymap {
       &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
       &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp GRAVE
       // ROW 2
-      &lhm LSHFT GRAVE &lhm LCTRL MINUS &lhm LALT EQUAL  &lhm LGUI LPAR    &lhm MEH BSLH
-      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RCTRL RIGHT  &rhm RSHFT SQT
+      &lhm LCTRL GRAVE &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI LPAR    &lhm MEH BSLH
+      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &rhm RCTRL SQT
       // ROW 3
       &kp TILDE        &kp UNDER        &kp PLUS         &kp RPAR          &kp PIPE
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
@@ -288,7 +269,7 @@ keymap {
       &trans           &kp N7           &kp N8           &kp N9            &kp GRAVE
       // ROW 2
       &trans           &trans           &trans           &trans            &trans
-      &trans           &rhm RGUI N4     &rhm RALT N5     &rhm RCTRL N6     &kp RSHFT
+      &trans           &rhm RGUI N4     &rhm RALT N5     &rhm RSHFT N6     &kp RCTRL
       // ROW 3
       &trans           &trans           &trans           &trans            &trans
       &kp N0           &kp N1           &kp N2           &kp N3            &trans
@@ -306,8 +287,8 @@ keymap {
       &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
       &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &ext_power EP_OFF &bt BT_CLR_ALL
       // ROW 2
-      &lhm LSHFT F6    &lhm LCTRL F7    &lhm LALT F8     &lhm LGUI F9      &kp F10
-      &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &kp RCTRL         &kp RSHFT
+      &lhm LCTRL F6    &lhm LSHFT F7    &lhm LALT F8     &lhm LGUI F9      &kp F10
+      &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &rhm RSHFT RCTRL         &kp RCTRL
       // ROW 3
       &kp F11          &kp F12          &kp F13          &kp F14           &kp F15
       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4
