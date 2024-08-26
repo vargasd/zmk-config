@@ -33,21 +33,29 @@
 / {
 combos {
   compatible = "zmk,combos";
+  left_middle_up {
+    key-positions = <2 12>;
+    bindings = <&kp LPAR>;
+  };
+  left_index_up {
+    key-positions = <3 13>;
+    bindings = <&kp RPAR>;
+  };
   right_index_up {
     key-positions = <6 16>;
-    bindings = <&ht LBRC LBKT>;
+    bindings = <&kp LBKT>;
   };
   right_index_down {
     key-positions = <16 26>;
-    bindings = <&ht LT LPAR>;
+    bindings = <&kp LBRC>;
   };
   right_middle_up {
     key-positions = <7 17>;
-    bindings = <&ht RBRC RBKT>;
+    bindings = <&kp RBKT>;
   };
   right_middle_down {
     key-positions = <17 27>;
-    bindings = <&ht GT RPAR>;
+    bindings = <&kp RBRC>;
   };
   left_arrow {
     key-positions = <15 34>;
@@ -246,14 +254,14 @@ keymap {
   NAV {
     bindings = <
       // ROW 1
-      &kp BANG         &kp AT           &kp HASH         &kp DOLLAR        &kp PERCENT
-      &kp CARET        &kp AMPS         &kp STAR         &kp MINUS         &kp GRAVE
+      &kp AT           &kp PLUS         &kp HASH         &kp AMPS          &none
+      &kp CARET        &kp PERCENT      &kp STAR         &kp DOLLAR        &kp GRAVE
       // ROW 2
-      &lhm LCTRL GRAVE &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI LPAR    &lhm MEH BSLH
-      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &rhm RCTRL SQT
+      &lhm LCTRL BANG  &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI LT      &lhm MEH GT
+      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &rhm RCTRL AT
       // ROW 3
-      &kp TILDE        &kp UNDER        &kp PLUS         &kp RPAR          &kp PIPE
-      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &trans
+      &kp TILDE        &kp UNDER        &kp UNDER        &kp PIPE          &none
+      &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp BSLH
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
@@ -269,10 +277,10 @@ keymap {
       &trans           &kp N7           &kp N8           &kp N9            &kp GRAVE
       // ROW 2
       &trans           &trans           &trans           &trans            &trans
-      &trans           &rhm RGUI N4     &rhm RALT N5     &rhm RSHFT N6     &kp RCTRL
+      &kp N0           &rhm RGUI N4     &rhm RALT N5     &rhm RSHFT N6     &rhm RCTRL AT
       // ROW 3
       &trans           &trans           &trans           &trans            &trans
-      &kp N0           &kp N1           &kp N2           &kp N3            &trans
+      &kp N0           &kp N1           &kp N2           &kp N3            &kp BSLH
       // THUMBS
       &trans           &trans           &trans
                                                          &trans            &trans           &trans
