@@ -60,25 +60,25 @@ combos {
   left_arrow {
     key-positions = <15 34>;
     bindings = <&mo_kp NAV LEFT>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <120>;
     slow-release;
   };
   down_arrow {
     key-positions = <16 34>;
     bindings = <&mo_kp NAV DOWN>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <120>;
     slow-release; // required for avoiding ⬇️ jjjj when holding space
   };
   up_arrow {
     key-positions = <17 34>;
     bindings = <&mo_kp NAV UP>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <120>;
     slow-release;
   };
   right_arrow {
     key-positions = <18 34>;
     bindings = <&mo_kp NAV RIGHT>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <120>;
     slow-release;
   };
   ctrl_space {
