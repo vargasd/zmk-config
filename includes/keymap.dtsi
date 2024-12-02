@@ -254,7 +254,7 @@ keymap {
   NAV {
     bindings = <
       // ROW 1
-      &kp AT           &kp PLUS         &kp HASH         &kp AMPS          &none
+      &kp BANG         &kp PLUS         &kp HASH         &kp AMPS          &none
       &kp CARET        &kp PERCENT      &kp STAR         &kp DOLLAR        &kp GRAVE
       // ROW 2
       &lhm LCTRL BANG  &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI LT      &lhm MEH GT
