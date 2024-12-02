@@ -39,22 +39,22 @@ combos {
   };
   left_index_up {
     key-positions = <3 13>;
-    bindings = <&kp RPAR>;
+    bindings = <&kp LBKT>;
+  };
+  left_index_down {
+    key-positions = <13 23>;
+    bindings = <&kp LBRC>;
   };
   right_index_up {
     key-positions = <6 16>;
-    bindings = <&kp LBKT>;
-  };
-  right_index_down {
-    key-positions = <16 26>;
-    bindings = <&kp LBRC>;
+    bindings = <&kp RBKT>;
   };
   right_middle_up {
     key-positions = <7 17>;
-    bindings = <&kp RBKT>;
+    bindings = <&kp RPAR>;
   };
-  right_middle_down {
-    key-positions = <17 27>;
+  right_index_down {
+    key-positions = <16 26>;
     bindings = <&kp RBRC>;
   };
   left_arrow {
