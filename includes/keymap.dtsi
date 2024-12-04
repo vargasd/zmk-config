@@ -232,17 +232,17 @@ keymap {
   };
 
   ALT {
-    // QWERTY
+    // Pine v4
     bindings = <
       // ROW 1
-      &kp Q            &kp W            &kp E            &kp R             &kp T
-      &kp Y            &kp I            &kp O            &kp U             &kp P
+      &kp Q            &kp L            &kp C            &kp M             &kp K
+      &kp SQT          &kp F            &kp U            &kp O             &kp Y
       // ROW 2
-      &lhm LCTRL A     &lhm LSHFT S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
-      &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RSHFT L      &rhm RCTRL SQT
+      &lhm LCTRL N     &lhm LSHFT R     &lhm LALT S      &lhm LGUI T       &lhm MEH W
+      &rhm MEH P       &rhm RGUI H      &rhm RALT E      &rhm RSHFT I      &rhm RCTRL A
       // ROW 3
-      &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &scomma          &codot            &kp FSLH
+      &kp J            &kp X            &kp Z            &kp G             &kp V
+      &kp B            &kp D            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
