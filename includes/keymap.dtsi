@@ -232,17 +232,17 @@ keymap {
   };
 
   ALT {
-    // QWERTY
+    // Pine v4
     bindings = <
       // ROW 1
-      &kp Q            &kp W            &kp E            &kp R             &kp T
-      &kp Y            &kp I            &kp O            &kp U             &kp P
+      &kp Q            &kp L            &kp C            &kp M             &kp K
+      &kp SQT          &kp F            &kp U            &kp O             &kp Y
       // ROW 2
-      &lhm LCTRL A     &lhm LSHFT S     &lhm LALT D      &lhm LGUI F       &lhm MEH G
-      &rhm MEH H       &rhm RGUI J      &rhm RALT K      &rhm RSHFT L      &rhm RCTRL SQT
+      &lhm LCTRL N     &lhm LSHFT R     &lhm LALT S      &lhm LGUI T       &lhm MEH W
+      &rhm MEH P       &rhm RGUI H      &rhm RALT E      &rhm RSHFT A      &rhm RCTRL I
       // ROW 3
-      &kp Z            &kp X            &kp C            &kp V             &kp B
-      &kp N            &kp M            &scomma          &codot            &kp FSLH
+      &kp J            &kp X            &kp Z            &kp G             &kp V
+      &kp B            &kp D            &scomma          &codot            &kp FSLH
       // THUMBS
       &mtb MEH DEL     &lhp NUM ESC    &mt LSHFT TAB
                                                          &mqt RCTRL RET    &ltb NAV SPC     &mtb MEH BSPC
@@ -296,7 +296,7 @@ keymap {
       &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &ext_power EP_OFF &bt BT_CLR_ALL
       // ROW 2
       &lhm LCTRL F6    &lhm LSHFT F7    &lhm LALT F8     &lhm LGUI F9      &kp F10
-      &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &rhm RSHFT RCTRL         &kp RCTRL
+      &kp C_PREV       &rhm RGUI C_PP   &rhm RALT C_NEXT &rhm RSHFT RCTRL  &kp RCTRL
       // ROW 3
       &kp F11          &kp F12          &kp F13          &kp F14           &kp F15
       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4
