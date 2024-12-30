@@ -57,12 +57,6 @@ combos {
     key-positions = <16 26>;
     bindings = <&kp RBRC>;
   };
-  left_arrow {
-    key-positions = <15 34>;
-    bindings = <&mo_kp NAV LEFT>;
-    require-prior-idle-ms = <120>;
-    slow-release;
-  };
   down_arrow {
     key-positions = <16 34>;
     bindings = <&mo_kp NAV DOWN>;
