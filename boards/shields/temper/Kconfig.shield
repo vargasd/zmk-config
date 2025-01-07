@@ -1,6 +1,10 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
+# No whitespace after the comma or in the keyboard name!
+config SHIELD_TEMPER_DONGLE
+    def_bool $(shields_list_contains,temper_dongle)
+
 config SHIELD_TEMPER_LEFT
     def_bool $(shields_list_contains,temper_left)
 
