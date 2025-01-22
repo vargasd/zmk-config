@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define QUICK_TAP_MS 200
-#define HRM_TAP_MS 225
+#define HRM_TAP_MS 280
 #define MEH RC(RS(RALT))
 #define HYPER LC(LS(LA(LGUI)))
 #define BASE 0
