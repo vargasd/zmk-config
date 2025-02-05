@@ -252,7 +252,7 @@ keymap {
       &kp CARET        &kp PERCENT      &kp STAR         &kp DOLLAR        &kp GRAVE
       // ROW 2
       &lhm LCTRL AT    &lhm LSHFT MINUS &lhm LALT EQUAL  &lhm LGUI LT      &lhm MEH GT
-      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &kp RCTRL
+      &rhm MEH LEFT    &rhm RGUI DOWN   &rhm RALT UP     &rhm RSHFT RIGHT  &rhm RCTRL AT
       // ROW 3
       &kp TILDE        &kp UNDER        &kp UNDER        &kp PIPE          &kp BSLH
       &kp HOME         &kp PG_DN        &kp PG_UP        &kp END           &kp BSLH
