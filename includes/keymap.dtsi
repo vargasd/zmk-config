@@ -287,10 +287,10 @@ keymap {
     bindings = <
       // ROW 1
       &kp F1           &kp F2           &kp F3           &kp F4            &kp F5
-      &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &ext_power EP_OFF &bt BT_CLR_ALL
+      &kp C_MUTE       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_PWR         &bt BT_CLR_ALL
       // ROW 2
       &lhm LCTRL F6    &lhm LSHFT F7    &lhm LALT F8     &lhm LGUI F9      &lhm MEH F10
-      &rhm MEH C_RW    &rhm RGUI C_PREV &rhm RALT C_PP   &rhm RSHFT C_NEXT &rhm RCTRL C_FF
+      &lhm MEH C_PREV  &rhm RGUI C_PP   &rhm RALT C_NEXT &rhm RSHFT RCTRL  &rhm RCTRL C_AL_LOCK
       // ROW 3
       &kp F11          &kp F12          &kp F13          &kp F14           &kp F15
       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4
